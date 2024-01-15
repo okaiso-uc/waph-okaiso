@@ -27,7 +27,9 @@ Steps to install required software
     -$sudo apt-get install texlive-fonts-extra
  -Install Chrome browser
 
-### Apaache Web Server Testing
+### Apache Web Server Testing
+[Apache image](Apache.png)
+
 
 
   
