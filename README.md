@@ -24,6 +24,12 @@ This is a private repository for Seth Okai to store all code from the course. Th
 
   - [Lab 0](labs/lab0): Development Environment Setup
 
+### Hackathons
 
+Hands-on hacking exercies
+
+### Individiual Projects
+
+### Team Project
 
 
