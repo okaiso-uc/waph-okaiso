@@ -14,10 +14,13 @@ This lab is covered in Lecture 2, with preparation homework in Lecture 1. In Par
 
 ## Part 1
 Steps to deploy Ubuntu 22.04 Virtual Machine
- - Request Machine to be deployed 
+
+ - Request Machine to be deployed
+   
  - Connect via Remote Console
    
 Steps to install the required software
+
  - Install net-tools to be able to view the IP adress sudo apt install net-tools)
    
  - Install Apache2 ($Sudo apt install apache2)
@@ -68,6 +71,7 @@ To create a Private Repository in GitHub you have to:
 
 ### Exercises
 In this lab, I generated SSH keys to add to my GitHub account:
+
   - Generate public key ($ssh-keygen)
     
   - View public key (cat ~/ .ssh/id_rsa.pub)
