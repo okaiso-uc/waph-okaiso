@@ -11,9 +11,11 @@
 
 ## Part 1
 Steps to deploy Ubuntu 22.04 Virtual Machine
- - Request Machine through the cyber range sandbox environment
- - Deploy Machine
+ - Request Machine to be deployed 
  - Connect via Remote Console
+ - Install net-tools to be able to view the IP adress(sudo apt install net-tools)
+ - Install Apache2 (Sudo apt install apache2)
+ - 
  - 
 
 
