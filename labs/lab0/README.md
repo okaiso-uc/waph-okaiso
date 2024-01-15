@@ -32,7 +32,7 @@ Steps to install required software
 
 ## Part 2
 The Course repository
-![courserepo.png]
+![courserepo](Images/courserepo.png)
 
 
   
