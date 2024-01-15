@@ -28,7 +28,7 @@ Steps to install required software
  -Install Chrome browser
 
 ### Apache Web Server Testing
-[Apache image](Apache.png)
+[Apache image](Images/Apache.png)
 
 
 
