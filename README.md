@@ -16,6 +16,14 @@
 
 Repository's URL: [https://github.com/Sethoka1/waph-okaiso.git](https://github.com/Sethoka1/waph-okaiso.git)
 
+This is a private repository for Seth Okai to store all code from the course. The organization of this repository is as follows
+
+### Labs
+
+[Hands-on exercises in lectures](labs)
+
+  -[lab 0 ](labs/lab0) : Development Environment Setup
+
 
 
 
