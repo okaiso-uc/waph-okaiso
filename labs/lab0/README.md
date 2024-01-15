@@ -13,8 +13,11 @@
 Steps to deploy Ubuntu 22.04 Virtual Machine
  - Request Machine to be deployed 
  - Connect via Remote Console
- - Install net-tools to be able to view the IP adress(sudo apt install net-tools)
+Steps to install required software
+ - Install net-tools to be able to view the IP adress sudo apt install net-tools)
  - Install Apache2 (Sudo apt install apache2)
+ - Install git (Sudo apt install git)
+ - Install Sublime-text editor (sudo apt install sublime-text --classic)
  - 
  - 
 
