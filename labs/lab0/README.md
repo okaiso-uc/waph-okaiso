@@ -63,7 +63,7 @@ I also had to configure git information before i could synchronize my code:
  -$git config --global user.name"Your Name"
 
  I used the Sublime text editor to edit my README file in markdown format.
- For the required template I had to include a headshot image and to do that I created an Image folder and uploaded my screenshot. From there I just used Markdown language to link the image in my code '![alt text](image location)
+ For the required template I had to include a headshot image and to do that I created an Image folder and uploaded my screenshot. From there I just used Markdown language to link the image in my code: '![alt text](image location)
  
 
    
