@@ -54,6 +54,7 @@ In this lab, I generated SSH keys to add to my GitHub account:
   - go to settings
   - go to SSH and GPG Keys
   - Add the New SSH Key
+
    
 
   
