@@ -12,7 +12,9 @@
 ## Part 1
 Steps to deploy Ubuntu 22.04 Virtual Machine
  - Request Machine through the cyber range sandbox environment
- - Deploy Mach
+ - Deploy Machine
+ - Connect via Remote Console
+ - 
 
 
  
