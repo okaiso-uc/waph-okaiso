@@ -14,17 +14,23 @@ Steps to deploy Ubuntu 22.04 Virtual Machine
  - Request Machine to be deployed 
  - Connect via Remote Console
    
-Steps to install required software
+Steps to install the required software
  - Install net-tools to be able to view the IP adress sudo apt install net-tools)
+   
  - Install Apache2 ($Sudo apt install apache2)
+   
  - Install git ($Sudo apt install git)
+   
  - Install Sublime-text editor ($sudo apt install sublime-text --classic)
+   
  - Install Pandoc,pdflatex and its fonts to render PDF files
+   
     -($Sudo apt install pandoc)
     -($Sudo apt-get install texlive-latex-base)
     -($sudo apt-get install texlive-fonts-recommended)
     -($sudo apt-get install texlive-latex-extra)
     -($sudo apt-get install texlive-fonts-extra)
+   
  -Install Chrome browser
 
 ### Apache Web Server Testing
@@ -41,18 +47,26 @@ To create a Private Repository in GitHub you have to:
  - Add your Repository name (waph-okaiso)
  - Sharing my repository with the professor
     -Click to settings
+   
     -click collaborators
+   
     -click add people
+   
     -add your collaborator (phungph-waph)
    [My private Repository](https://github.com/Sethoka1/waph-okaiso.git)
 
 ### Exercises
 In this lab, I generated SSH keys to add to my GitHub account:
   - Generate public key ($ssh-keygen)
+    
   - View public key (cat ~/ .ssh/id_rsa.pub)
+
   - copy key
+    
   - go to settings
+    
   - go to SSH and GPG Keys
+    
   - Add the New SSH Key
 
 In this Lab, I cloned my Remote Repository by using the "$git clone (URL)" command
