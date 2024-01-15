@@ -87,6 +87,7 @@ In this lab, I generated SSH keys to add to my GitHub account:
 In this Lab, I cloned my Remote Repository by using the "$git clone (URL)" command
 
 I also had to configure git information before i could synchronize my code:
+
  -$git config --global user.name "your-email"
  
  -$git config --global user.name"Your Name"
