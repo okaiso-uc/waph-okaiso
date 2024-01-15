@@ -45,10 +45,15 @@ Steps to install the required software
 
 ### Private repository
 To create a Private Repository in GitHub you have to:
+
  - Create a GitHub Account
+   
  - Click the New button which indicates a new repository
+   
  - Add your Repository name (waph-okaiso)
+   
  - Sharing my repository with the professor
+   
     -Click to settings
    
     -click collaborators
