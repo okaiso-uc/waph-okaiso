@@ -22,7 +22,7 @@ This is a private repository for Seth Okai to store all code from the course. Th
 
 [Hands-on exercises in lectures](labs)
 
-  -[lab 0 ](labs/lab0) : Development Environment Setup
+  - [lab 0 ](labs/lab0) : Development Environment Setup
 
 
 
