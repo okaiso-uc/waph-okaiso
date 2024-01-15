@@ -45,6 +45,15 @@ To create a Private Repository in GitHub you have to:
     -click add people
     -add your collaborator (phungph-waph)
    [My private Repository](https://github.com/Sethoka1/waph-okaiso.git)
+
+### Exercises
+In this lab, I generated SSH keys to add to my GitHub account
+  - Generate public key ($ssh-keygen)
+  - View public key (cat ~/ .ssh/id_rsa.pub)
+  - copy key
+  - go to settings
+  - go to SSH and GPG Keys
+  - Add the New SSH Key
    
 
   
