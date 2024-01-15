@@ -55,7 +55,10 @@ In this lab, I generated SSH keys to add to my GitHub account:
   - go to SSH and GPG Keys
   - Add the New SSH Key
 
-In this Lab, I cloned my Remote Repository by using the "$git clone <URL>" command
+In this Lab, I cloned my Remote Repository by using the "$git clone (URL)" command
+I also had to configure git information before i could syncronize my code:
+ -$git config --global user.name "your-email"
+ -$git config --global user.name"Your Name"
 
    
 
