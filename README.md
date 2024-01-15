@@ -4,7 +4,7 @@
 
 ## Student
 
-**Name: Seth Okai
+**Name**: Seth Okai
 
 **Email**: okaiso@uc.mail.edu
 
