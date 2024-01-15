@@ -57,13 +57,13 @@ In this lab, I generated SSH keys to add to my GitHub account:
 
 In this Lab, I cloned my Remote Repository by using the "$git clone (URL)" command
 
-I also had to configure git information before i could syncronize my code:
+I also had to configure git information before i could synchronize my code:
  -$git config --global user.name "your-email"
  
  -$git config --global user.name"Your Name"
 
  I used the Sublime text editor to edit my README file in markdown format.
- Following the required template I had to include a headshot image and to do that I created an Image folder and uploaded my screenshot. From there I just used Markdown language too link the image in my code
+ For the required template I had to include a headshot image and to do that I created an Image folder and uploaded my screenshot. From there I just used Markdown language to link the image in my code '![alt text](image location)
  
 
    
