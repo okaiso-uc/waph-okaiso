@@ -47,7 +47,7 @@ To create a Private Repository in GitHub you have to:
    [My private Repository](https://github.com/Sethoka1/waph-okaiso.git)
 
 ### Exercises
-In this lab, I generated SSH keys to add to my GitHub account
+In this lab, I generated SSH keys to add to my GitHub account:
   - Generate public key ($ssh-keygen)
   - View public key (cat ~/ .ssh/id_rsa.pub)
   - copy key
