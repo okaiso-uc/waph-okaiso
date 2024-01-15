@@ -9,4 +9,4 @@
 **Short-Bio** Seth okai has interests in the Red team field and loves cybersecurity
 
 
-![Seths's Headshot](Images/headshot.jpg)
+![Seths's Headshot](Images\headshot.jpg)
