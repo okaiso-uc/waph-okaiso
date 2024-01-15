@@ -34,6 +34,17 @@ Steps to install required software
 The Course repository
 ![courserepo](Images/courserepo.png)
 
+Private repository
+To create a Private Repository in GitHub you have to:
+ - Create a GitHub Account
+ - Click the New button which indicates a new repository
+ - Add your Repository name
+ - Sharing my repository with the professor
+    -Click to settings
+    -click collabortors
+    -click add people
+    -add your collaborator (waph-phungph)
+   
 
   
 
