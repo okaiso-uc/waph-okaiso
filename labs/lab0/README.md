@@ -35,13 +35,13 @@ Steps to install the required software
 
 ### Apache Web Server Testing
 
-![Apache image](Images/Apache.png)
+![Apache image](Images/Apache.jpg)
 
 ## Part 2
 
 ### The Course repository
  
-![courserepo](Images/courserepo.png) 
+![courserepo](Images/courserepo.jpg) 
 
 ### Private repository
 To create a Private Repository in GitHub you have to:
