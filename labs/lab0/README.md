@@ -21,7 +21,12 @@ Steps to install required software
  - Install Sublime-text editor ($sudo apt install sublime-text --classic)
  - Install Pandoc,pdflatex and its fonts to render PDF files
     -$Sudo apt install pandoc
-    -$Sudo apt-get
+    -$Sudo apt-get install texlive-latex-base
+    -$sudo apt-get install texlive-fonts-recommended
+    -$sudo apt-get install texlive-latex-extra
+    -$sudo apt-get install texlive-fonts-extra
+ -Install Chrome browser
+
 
   
 
