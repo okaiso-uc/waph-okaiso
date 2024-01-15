@@ -34,7 +34,7 @@ Steps to install required software
 The Course repository
 ![courserepo](Images/courserepo.png)
 
-Private repository
+###Private repository
 To create a Private Repository in GitHub you have to:
  - Create a GitHub Account
  - Click the New button which indicates a new repository
