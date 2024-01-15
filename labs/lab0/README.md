@@ -37,8 +37,9 @@ Steps to install the required software
 ![Apache image](Images/Apache.png)
 
 ## Part 2
+
  **The Course repository**
-![courserepo](Images/courserepo.png)  **The Course repository**
+![courserepo](Images/courserepo.png) 
 
 ### Private repository
 To create a Private Repository in GitHub you have to:
