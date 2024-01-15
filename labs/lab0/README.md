@@ -38,12 +38,13 @@ Private repository
 To create a Private Repository in GitHub you have to:
  - Create a GitHub Account
  - Click the New button which indicates a new repository
- - Add your Repository name
+ - Add your Repository name (waph-okaiso)
  - Sharing my repository with the professor
     -Click to settings
-    -click collabortors
+    -click collaborators
     -click add people
-    -add your collaborator (waph-phungph)
+    -add your collaborator (phungph-waph)
+   [My private Repository](https://github.com/Sethoka1/waph-okaiso.git)
    
 
   
