@@ -39,7 +39,7 @@ Steps to install the required software
 
 ## Part 2
 
-###The Course repository
+### The Course repository
  
 ![courserepo](Images/courserepo.png) 
 
