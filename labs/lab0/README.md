@@ -2,7 +2,7 @@
 
 ## Instructor: Dr. Phu Phung
 
-## Student: Seth Okai
+## Student: Seth Okai 
 ![Seths's Headshot](Images/headshot.jpg)
 
 # Lab 0 - Development Environment Setup
@@ -49,11 +49,13 @@ Steps to install the required software
  -Install Chrome browser
 
 ### Apache Web Server Testing
+
 ![Apache image](Images/Apache.jpg)
 
 ## Part 2
 
 ### The Course repository
+
 ![courserepo](Images/courserepo.jpg) 
 
 ### Private repository
