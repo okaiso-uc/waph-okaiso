@@ -49,13 +49,11 @@ Steps to install the required software
  -Install Chrome browser
 
 ### Apache Web Server Testing
-
 ![Apache image](Images/Apache.jpg)
 
 ## Part 2
 
 ### The Course repository
- 
 ![courserepo](Images/courserepo.jpg) 
 
 ### Private repository
