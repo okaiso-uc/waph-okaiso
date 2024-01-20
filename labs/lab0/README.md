@@ -4,7 +4,7 @@
 
 # Lab 0 - Development Environment Setup
 
-![Seths's Headshot](Images/headshot.jpg)
+![Seths's Headshot](Images/Headshot.jpg)
 
 ## Lab Overview
 
