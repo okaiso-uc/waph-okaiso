@@ -6,9 +6,6 @@
 
 # WAPH-Web Application Programming and Hacking
 
-## Student: Seth Okai
-![Seths's Headshot](Images/headshot.jpg)
-
 ## Lab Overview
 
 This lab is covered in Lecture 2, with preparation homework in Lecture 1. In Part I, I need to deploy an Ubuntu 22.04 Virtual Machine on the provided online environment and install software and applications. In Part II, I will clone the course repository and my private repository and complete git exercises to write the report. 
