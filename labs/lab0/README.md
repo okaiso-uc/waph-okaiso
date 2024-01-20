@@ -2,6 +2,9 @@
 
 ## Instructor: Dr. Phu Phung
 
+## Student: Seth Okai
+![Seths's Headshot](Images/headshot.jpg)
+
 # Lab 0 - Development Environment Setup
 
 # WAPH-Web Application Programming and Hacking
