@@ -4,6 +4,9 @@
 
 # Lab 0 - Development Environment Setup
 
+# WAPH-Web Application Programming and Hacking
+
+## Student: Seth Okai
 ![Seths's Headshot](Images/Headshot.jpg)
 
 ## Lab Overview
