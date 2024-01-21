@@ -15,15 +15,21 @@ This lab is covered in Lecture 3 with the following tasks.
 ## Part I: The Web and HTTP Protocol
 
 ### Task 1  Familiar with the Wireshark tool and HTTP protocol
-
 Using The filters in Wireshark I was able to filter out only HTTP traffic. I initiated this traffic via an HTTP request from my browser.
 
 **Http Request**
+
 ![http request](Images/httprequest.jpg)
 
 
 **Http Response**
+
 ![http response](Images/httpresponse.jpg)
+
+**Http Stream**
+
+![http steam](Images/httpstream.jpg)
+
       
 ### Task 2 (10 pts). Understanding HTTP using telnet and Wireshark.
 
