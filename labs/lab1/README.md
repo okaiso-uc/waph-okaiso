@@ -15,8 +15,16 @@ This lab is covered in Lecture 3 with the following tasks.
 ## Part I: The Web and HTTP Protocol
 
 ### Task 1  Familiar with the Wireshark tool and HTTP protocol
+
+Using Wireshark I was able to filter out an HTTP Request, HTTP Stream, and HTTP Response. I sent the request using my browser.
+
+**Http Request**
+![http request](Images/httprequest.jpg)
+
+**Http Response**
+![http response](Images/httpresponse.jpg)
       
-   3. Task 2 (10 pts). Understanding HTTP using telnet and Wireshark.
+### Task 2 (10 pts). Understanding HTTP using telnet and Wireshark.
 
 ### Part II: Basic Web Application Programming
 
