@@ -2,7 +2,9 @@
 
 ## Instructor: Dr. Phu Phung
 
-##Student: Seth Okai
+## Student: Seth Okai
+
+![Seths's Headshot](Images/headshot.jpg)
 
 # Lab 1 - Foundations of the Web 
 
