@@ -15,7 +15,7 @@ This lab is covered in Lecture 3 with the following tasks.
 ## Part I: The Web and HTTP Protocol
 
 ### Task 1  Familiar with the Wireshark tool and HTTP protocol
- I started a traffic capture on Wire Shark and sent an HTTP request via my browser to "example.com", then Using the filters in Wireshark I was able to filter out only HTTP traffic.
+I started a traffic capture on WireShark, sent an HTTP request to 'example.com' via my browser, and used Wireshark filters to isolate only HTTP traffic.
 
 **HTTP Request**
 
