@@ -12,10 +12,11 @@
 
 This lab is covered in Lecture 3 with the following tasks.
 
-### Part I: The Web and HTTP Protocol
+## Part I: The Web and HTTP Protocol
 
-   1. Task 1 (10 pts). Familiar with the Wireshark tool and HTTP protocol
-   2. Task 2 (10 pts). Understanding HTTP using telnet and Wireshark.
+### Task 1  Familiar with the Wireshark tool and HTTP protocol
+      
+   3. Task 2 (10 pts). Understanding HTTP using telnet and Wireshark.
 
 ### Part II: Basic Web Application Programming
 
