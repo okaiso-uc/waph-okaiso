@@ -34,9 +34,10 @@ I started a traffic capture on WireShark, sent an HTTP request to 'example.com' 
 ### Task 2 (10 pts). Understanding HTTP using telnet and Wireshark.
 
 **HTTP request from terminal**
-![terminalrequest](Images/terminalrequest.jpj)
+![terminalrequest](Images/terminalrequest.jpg)
 
 **HTTP request from Wireshark**
+
 From wire shark the carriage return character and line -feed character is included in the request unlike the terminal request
 
 ![wiresharkrequest](Images/wiresharkrequest.jpg)
