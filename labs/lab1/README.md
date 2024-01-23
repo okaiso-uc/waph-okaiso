@@ -42,6 +42,7 @@ I started a traffic capture on WireShark, sent an HTTP request to 'example.com' 
 
 ![wiresharkrequest](Images/wiresharkrequest.jpg)
 
+- There isn't any difference between the response message in wire shark and the one from the terminal
 
 
 
