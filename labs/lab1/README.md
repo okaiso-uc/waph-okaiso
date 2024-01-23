@@ -38,9 +38,11 @@ I started a traffic capture on WireShark, sent an HTTP request to 'example.com' 
 
 **HTTP request from Wireshark**
 
-From wire shark the carriage return character and line -feed character is included in the request unlike the terminal request
+- From wire shark the carriage return character and line -feed character is included in the request unlike the terminal request
 
 ![wiresharkrequest](Images/wiresharkrequest.jpg)
+
+
 
 
 ### Part II: Basic Web Application Programming
