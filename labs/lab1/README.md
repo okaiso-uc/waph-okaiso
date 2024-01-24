@@ -1,4 +1,4 @@
-# WAPH-Web Application Programming and Hacking
+![image](https://github.com/Sethoka1/waph-okaiso/assets/156627165/e99d1249-4550-42e7-884a-e7d7cf5aa503)# WAPH-Web Application Programming and Hacking
 
 ## Instructor: Dr. Phu Phung
 
@@ -111,8 +111,24 @@ int main(void) {
    ```
 
 This web application is vulnerable to cross-site scripting (XSS) because there isn't any sanitization of inputs.
+
       
-   5. Task 3 (10 pts). Understanding HTTP GET and POST requests
+   5. Understanding HTTP GET and POST requests
+
+      I started a capture on wireshark to examine the echo.php page with my name in it.
+
+      Below are the response and request pages
+
+      ** Echo Response**
+
+      [echoresponse](Images/echoresponse.jpg)
+
+      ** Echo Request**
+
+      ![echorequest](Images/echorequest.jpg)
+
+      
+      
 
 
 
