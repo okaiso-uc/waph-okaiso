@@ -92,6 +92,7 @@ int main(void) {
        - Deplot the code to webserver root directory (/var/www/html/)
          
        - Vist the sit using: "ip-address/helloworld.php
+         
          ![phpprogram](Images/phpprogram.jpg)
          
       
