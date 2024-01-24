@@ -63,7 +63,7 @@ I started a traffic capture on WireShark, sent an HTTP request to 'example.com' 
          
        - Vist the sit using: "ip-address/cgi-bin/helloworld.cgi
      
-       - ![cpiprogram](Images/cgiprogram.jpg)
+        ![cpiprogram](Images/cgiprogram.jpg)
 
        
        Below is another c cgi program deployed with html
