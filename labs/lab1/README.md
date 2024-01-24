@@ -80,8 +80,22 @@ int main(void) {
    ```
 
        
-   3. Task 2 (10 pts). A simple PHP Web Application with user input.
-   4. Task 3 (10 pts). Understanding HTTP GET and POST requests
+   3.  A simple PHP Web Application with user input
+       - Install php and configure it to work with Apache webserver ($Sudo agt-get install php libapache2-mod-php -y)
+       
+       - Make a PHP file named hello.world.PHP
+         
+       - Write the php code
+         
+       - Install GCC compiler
+         
+       - Deplot the code to webserver root directory (/var/www/html/)
+         
+       - Vist the sit using: "ip-address/helloworld.php
+         ![phpprogram](Images/phpprogram.jpg)
+         
+      
+   5. Task 3 (10 pts). Understanding HTTP GET and POST requests
 
 
 
