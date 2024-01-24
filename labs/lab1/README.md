@@ -96,6 +96,8 @@ int main(void) {
          ![phpprogram](Images/phpprogram.jpg)
 
        Below is another php program with a my name in the data:
+       
+       ![echoprogram](Images/echoprogram.jpg)
 
        
 
