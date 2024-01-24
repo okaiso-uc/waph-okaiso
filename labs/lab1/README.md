@@ -89,12 +89,26 @@ int main(void) {
          
        - Install GCC compiler
          
-       - Deplot the code to webserver root directory (/var/www/html/)
+       - Deploy the code to webserver root directory (/var/www/html/)
          
        - Vist the sit using: "ip-address/helloworld.php
          
          ![phpprogram](Images/phpprogram.jpg)
-         
+
+       Below is another php program with a my name in the data:
+
+       
+
+           Included file `echo.php`:
+   ```C
+     <?php
+        echo "Hello , this is the echo PHP web application my name is Seth Okai,";
+        phpinfo();
+?>
+
+   ```
+
+This web application is doesn't have any security risks since its just printing out a simple greeting but if I was to accept User inputs I would be vulnerable to cross-site scripting (XSS) because there isn't any sanitization of inputs.
       
    5. Task 3 (10 pts). Understanding HTTP GET and POST requests
 
