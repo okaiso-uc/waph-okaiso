@@ -49,13 +49,19 @@ I started a traffic capture on WireShark, sent an HTTP request to 'example.com' 
 ### Part II: Basic Web Application Programming
 
    1.  CGI Web applications in C
-             - Make a c file named hello.world.c
-             - Write the c code
-             - Install GCC compiler
-             - Use GCC to compile the code
-             - Test the code using ./helloworld.cgi"
-             - Move the code to /usr/lib/cgi-bin/
-             - Vist the sit using: "ip-address/cgi-bin/helloworld.cgi
+       - Make a c file named hello.world.c
+         
+       - Write the c code
+         
+       - Install GCC compiler
+     
+       - Use GCC to compile the code
+         
+       - Test the code using ./helloworld.cgi"
+         
+       - Move the code to /usr/lib/cgi-bin/
+         
+       - Vist the sit using: "ip-address/cgi-bin/helloworld.cgi
        
        Below is another c cgi program deployed with html
 
