@@ -121,7 +121,7 @@ This web application is vulnerable to cross-site scripting (XSS) because there i
 
       ** Echo Response**
 
-      [echoresponse](Images/echoresponse.jpg)
+      ![echoresponse](Images/echoresponse.jpg)
 
       ** Echo Request**
 
