@@ -8,9 +8,9 @@
 
 # Lab 1 - Foundations of the Web 
 
-## Overview 
+## The lab's overview
 
-This lab is covered in Lecture 3 with the following tasks.
+In this lab, I learned a lot about using CGI and PHP in web application development. I also Learned how to use Wireshark to view different types of requests and responses. Lastly, I was able to use curl to create an HTTP post request with my name in the data.
 
 ## Part I: The Web and HTTP Protocol
 
@@ -135,8 +135,7 @@ Using curl I was able to post a request ($curl -X POST [URL] -d [fieldname=input
 
 ![curlstream](Images/curlstream.jpg)
 
-Both the GET and POST requests are HTTP protocols, but the parameters are visible in the URL for the GET request.
+Both the GET and POST requests are HTTP protocols, but the parameters are visible in the URL for the GET request and data is transmitted in the body of the HTTP packet for the post request.
 
-## The lab's overview
 
 
