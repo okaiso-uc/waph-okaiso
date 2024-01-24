@@ -1,4 +1,4 @@
-![image](https://github.com/Sethoka1/waph-okaiso/assets/156627165/e99d1249-4550-42e7-884a-e7d7cf5aa503)# WAPH-Web Application Programming and Hacking
+# WAPH-Web Application Programming and Hacking
 
 ## Instructor: Dr. Phu Phung
 
