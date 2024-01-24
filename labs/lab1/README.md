@@ -135,6 +135,7 @@ Using curl I was able to post a request ($curl -X POST [URL] -d [fieldname=input
 
 ![curlstream](Images/curlstream.jpg)
 
+Both the GET and POST requests are HTTP protocols, but the parameters are visible in the URL for the GET request.
 
 ## The lab's overview
 
