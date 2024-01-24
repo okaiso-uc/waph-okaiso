@@ -112,8 +112,10 @@ int main(void) {
 
 This web application is vulnerable to cross-site scripting (XSS) because there isn't any sanitization of inputs.
 
-      
-   5. Understanding HTTP GET and POST requests
+
+## Task 3
+
+    Understanding HTTP GET and POST requests
 
       I started a capture on wireshark to examine the echo.php page with my name in it.
 
