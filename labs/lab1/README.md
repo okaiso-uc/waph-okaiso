@@ -115,19 +115,19 @@ This web application is vulnerable to cross-site scripting (XSS) because there i
 
 ## Task 3
 
-    Understanding HTTP GET and POST requests
+  Understanding HTTP GET and POST requests
 
-      I started a capture on wireshark to examine the echo.php page with my name in it.
+  I started a capture on wireshark to examine the echo.php page with my name in it.
 
-      Below are the response and request pages
+  Below are the response and request pages
 
-      ** Echo Response**
+  ** Echo Response**
 
-      ![echoresponse](Images/echoresponse.jpg)
+ ![echoresponse](Images/echoresponse.jpg)
 
-      ** Echo Request**
+   ** Echo Request**
 
-      ![echorequest](Images/echorequest.jpg)
+  ![echorequest](Images/echorequest.jpg)
 
       
       
