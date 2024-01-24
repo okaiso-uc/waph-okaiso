@@ -48,9 +48,31 @@ I started a traffic capture on WireShark, sent an HTTP request to 'example.com' 
 
 ### Part II: Basic Web Application Programming
 
-   1. Task 1 (10 pts). CGI Web applications in C
-   2. Task 2 (10 pts). A simple PHP Web Application with user input.
-   3. Task 3 (10 pts). Understanding HTTP GET and POST requests
+   1.  CGI Web applications in C
+             - Make a c file named hello.world.c
+             - Write the c code
+             - Install GCC compiler
+             - Use GCC to compile the code
+             - Test the code using ./helloworld.cgi"
+             - Move the code to /usr/lib/cgi-bin/
+             - Vist the sit using: "ip-address/cgi-bin/helloworld.cgi
+       
+       Below is another c cgi program deployed with html
+
+         Included file `index.c`:
+   ```C
+     #include <stdio.h>
+int main(void) {
+   printf("Content-Type :text/plain; charset=utf-8\n\n");
+   printf("<!DOCTYPE html> <html> <head> <title> Seth Okai </title> </head> <body> <h1> WAPH </h1> <p>Welcome</p></body></html>\n\n");
+  return 0;
+}
+      }
+   ```
+
+       
+   3. Task 2 (10 pts). A simple PHP Web Application with user input.
+   4. Task 3 (10 pts). Understanding HTTP GET and POST requests
 
 
 
