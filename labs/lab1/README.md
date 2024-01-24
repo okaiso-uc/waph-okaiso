@@ -129,9 +129,11 @@ This web application is vulnerable to cross-site scripting (XSS) because there i
 
   ![echorequest](Images/echorequest.jpg)
 
+Using curl I was able to post a request ($curl -X POST [URL] -d [fieldname=input]
       
-      
+![curloutcome](Images/curloutcome.jpg)
 
+![curlstream](Images/curlstream.jpg)
 
 
 ## The lab's overview
