@@ -95,7 +95,7 @@ int main(void) {
          
          ![phpprogram](Images/phpprogram.jpg)
 
-       Below is another php program with a my name in the data:
+       Below is another php program with  my name in the data:
        
        ![echoprogram](Images/echoprogram.jpg)
 
@@ -110,7 +110,7 @@ int main(void) {
 
    ```
 
-This web application is doesn't have any security risks since its just printing out a simple greeting but if I was to accept User inputs I would be vulnerable to cross-site scripting (XSS) because there isn't any sanitization of inputs.
+This web application is vulnerable to cross-site scripting (XSS) because there isn't any sanitization of inputs.
       
    5. Task 3 (10 pts). Understanding HTTP GET and POST requests
 
