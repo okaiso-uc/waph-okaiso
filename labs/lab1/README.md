@@ -76,23 +76,21 @@ I started a traffic capture on WireShark, sent an HTTP request to 'example.com' 
    
     #include <stdio.h>
 
+    int main() {
 
+          Printf("Content-Type: text/html; charset=utf-8\n\n");
 
-      int main() {
+    
+          printf("<html>\n");
+          printf("<head>\n");
+          printf("<title>WAPH</title>\n");
+          printf("</head>\n");
+          printf("<body>\n");
+          printf("<h1>Hi I am Seth Okai, welcome to my site</h1>\n");
+          printf("</body>\n");
+          printf("</html>\n");
 
-      Printf("Content-Type: text/html; charset=utf-8\n\n");
-
-    // Print the HTML content
-    printf("<html>\n");
-    printf("<head>\n");
-    printf("<title>WAPH</title>\n");
-    printf("</head>\n");
-    printf("<body>\n");
-    printf("<h1>Hi I am Seth Okai, welcome to my site</h1>\n");
-    printf("</body>\n");
-    printf("</html>\n");
-
-    return 0;
+          return 0;
 }
    
 
