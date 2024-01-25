@@ -37,6 +37,7 @@ I started a traffic capture on WireShark, sent an HTTP request to 'example.com' 
 ### Task 2 (10 pts). Understanding HTTP using telnet and Wireshark.
 
 **HTTP request from terminal**
+
 ![terminalrequest](Images/terminalrequest.jpg)
 
 **HTTP request from Wireshark**
