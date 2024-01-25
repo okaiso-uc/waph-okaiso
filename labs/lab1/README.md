@@ -81,6 +81,7 @@ I started a traffic capture on WireShark, sent an HTTP request to 'example.com' 
 
 
          Included file `index.c`:
+       
   ```C
     #include <stdio.h>
 
@@ -124,13 +125,14 @@ I started a traffic capture on WireShark, sent an HTTP request to 'example.com' 
 
        
 
-           Included file `echo.php`:
-   ```C
+        Included file `echo.php`:
+       
+    ```C
     <?php
         echo $_REQUEST['data'];
 ?>
 
-   ```
+    ```
    
 
 This web application is vulnerable to cross-site scripting (XSS) because there isn't any sanitization of inputs.
