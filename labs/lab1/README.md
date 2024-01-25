@@ -71,6 +71,7 @@ I started a traffic capture on WireShark, sent an HTTP request to 'example.com' 
 
        
        Below is another c cgi program deployed with html
+       
        ![Indexcgi](Images/indexcgi.jpg)
 
          Included file `index.c`:
