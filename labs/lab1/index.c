@@ -1,7 +1,16 @@
 #include <stdio.h>
-int main(void) {
+int main() {
    printf("Content-Type: text/plain; charset=utf-8\n\n");
-   printf("<!DOCTYPE html> <html> <head> <title> Seth Okai </title> </head> <body> <h1> WAPH </h1> <p>Welcome</p></body></html>\n\n");
-  return 0;
-}
+
+   printf("<html>\n");
+   printf("<head>\n");
+   printf("<title> WAPH</title>\n");
+   printf("</head>\n");
+   printf("<body>\n");
+   printf("<h1>Hi welcome to my site</h1>\n");
+   printf("</body>\n");
+   printf("</html>\n");
+   
+   return 0;
+
 
