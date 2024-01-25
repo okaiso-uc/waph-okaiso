@@ -78,7 +78,7 @@ I started a traffic capture on WireShark, sent an HTTP request to 'example.com' 
 
     int main() {
 
-          Printf("Content-Type: text/html; charset=utf-8\n\n");
+          printf("Content-Type: text/html; charset=utf-8\n\n");
 
     
           printf("<html>\n");
