@@ -138,11 +138,11 @@ This web application is vulnerable to cross-site scripting (XSS) because there i
 
   Below are the response and request pages
 
-  ** Echo Response**
+  **Echo Response**
 
  ![echoresponse](Images/echoresponse.jpg)
 
-   ** Echo Request**
+   **Echo Request**
 
   ![echorequest](Images/echorequest.jpg)
 
