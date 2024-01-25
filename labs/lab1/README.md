@@ -81,7 +81,7 @@ I started a traffic capture on WireShark, sent an HTTP request to 'example.com' 
 
 
          Included file `index.c`:
-   
+'''C
     #include <stdio.h>
 
     int main() {
@@ -100,7 +100,7 @@ I started a traffic capture on WireShark, sent an HTTP request to 'example.com' 
 
           return 0;
 }
-   
+   '''
 
        
    3.  A simple PHP Web Application with user input
