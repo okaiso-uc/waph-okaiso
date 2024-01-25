@@ -73,12 +73,12 @@ I started a traffic capture on WireShark, sent an HTTP request to 'example.com' 
        ![Indexcgi](Images/indexcgi.jpg)
 
          Included file `index.c`:
-   ```C
+   
     #include <stdio.h>
 
 int main() {
     // Set the Content-Type header to text/html
-   // had to comment out code because of pandoc error printf("Content-Type: text/html; charset=utf-8\n\n");
+    had to comment out code because of pandoc error printf("Content-Type: text/html; charset=utf-8\n\n");
 
     // Print the HTML content
     printf("<html>\n");
@@ -92,7 +92,7 @@ int main() {
 
     return 0;
 }
-   ```
+   
 
        
    3.  A simple PHP Web Application with user input
