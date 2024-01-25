@@ -40,6 +40,8 @@ I started a traffic capture on WireShark, sent an HTTP request to 'example.com' 
 
 ![terminalrequest](Images/terminalrequest.jpg)
 
+
+
 **HTTP request from Wireshark**
 
 - From wire shark the carriage return character and line -feed character is included in the request unlike the terminal request
@@ -66,13 +68,17 @@ I started a traffic capture on WireShark, sent an HTTP request to 'example.com' 
        - Move the code to /usr/lib/cgi-bin/
          
        - Vist the sit using: "ip-address/cgi-bin/helloworld.cgi
-     
+
+
         ![cpiprogram](Images/cgiprogram.jpg)
+
 
        
        Below is another c cgi program deployed with html
-       
+
+
        ![Indexcgi](Images/indexcgi.jpg)
+
 
          Included file `index.c`:
    
