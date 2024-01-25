@@ -117,13 +117,13 @@ I started a traffic capture on WireShark, sent an HTTP request to 'example.com' 
        
 
            Included file `echo.php`:
-   ```C
+   
      <?php
         echo "Hello , this is the echo PHP web application my name is Seth Okai,";
         phpinfo();
-?>
+    ?>
 
-   ```
+   
 
 This web application is vulnerable to cross-site scripting (XSS) because there isn't any sanitization of inputs.
 
