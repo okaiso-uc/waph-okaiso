@@ -73,13 +73,24 @@ I started a traffic capture on WireShark, sent an HTTP request to 'example.com' 
 
          Included file `index.c`:
    ```C
-     #include <stdio.h>
-int main(void) {
-   printf("Content-Type: text/plain; charset=utf-8\n\n");
-   printf("<!DOCTYPE html> <html> <head> <title> Seth Okai </title> </head> <body> <h1> WAPH </h1> <p>Welcome</p></body></html>\n\n");
-  return 0;
+    #include <stdio.h>
+
+int main() {
+    // Set the Content-Type header to text/html
+    printf("Content-Type: text/html; charset=utf-8\n\n");
+
+    // Print the HTML content
+    printf("<html>\n");
+    printf("<head>\n");
+    printf("<title>WAPH</title>\n");
+    printf("</head>\n");
+    printf("<body>\n");
+    printf("<h1>Hi, welcome to my site</h1>\n");
+    printf("</body>\n");
+    printf("</html>\n");
+
+    return 0;
 }
-      }
    ```
 
        
