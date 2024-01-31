@@ -13,6 +13,13 @@
 <div id="menubar">
   <h3>Student: Seth Okai</h3>
   <img src="Images/headshot.jpg" alt="My Headshot" width="50">
+  <div id="digital-clock"></div>
+  <script type="text/javascript">
+    function displayTime() {
+      document.getElementById('digital-clock').innerHTML = "Current time:" + new Data();
+    }
+    setInterval(displayTime,500);
+  </script>
 </div>
 <div id="main">
   <p>A simple HTML page </p>
@@ -29,10 +36,15 @@
   <div>
     <i>form With an HTTP POST Request</i>
     <form action="/echo.php" method="POST" name="echo_post">
-      your input: <input name="data">
+      your input: <input name="data"
+                         onkeypress="console.log('you have pressed a key')">
       <input type="submit" value="Submit">
      </form>
   </div> 
+  <hr>
+  <b>Experiments with Javascript code</b><br>
+  <i>Inclined Javascript</i>
+  <div id=date" onclick="document.getElementById('date').innerHTML= Date()">Click here to show Date()</div>
 </div>
 </body>
 </html>
