@@ -16,32 +16,31 @@
   <script src="email.js"></script>
   <img src="Images/headshot.jpg" alt="My Headshot" width="50">
   <div id="digital-clock"></div>
-  <canvas id="analog-clock" width="150" heigh="150" style"background-color:#999"></canvas>
+  <canvas id="analog-clock" width="150" height="150" style="background-color:#999"></canvas>
   <script src="https://waph-uc.github.io/clock.js"></script>
   <script type="text/javascript">
-    Var canvas = document.getElementById("analog-clock");
-    Var ctx    = canvas.getContext("2d);
-    Var radius = canvas.height / 2;
+    var canvas = document.getElementById("analog-clock");
+    var ctx = canvas.getContext("2d");
+    var radius = canvas.height / 2;
     ctx.translate(radius, radius);
-    radius = radius * 0.90
-    SetInterval(drawClock, 1000);
+    radius = radius * 0.90;
+    setInterval(drawClock, 1000);
 
     function drawClock() {
       drawFace(ctx, radius);
       drawNumbers(ctx, radius);
       drawTime(ctx, radius);
     }
-      
+
     function displayTime() {
       document.getElementById('digital-clock').innerHTML = "Current time:" + new Date();
     }
     setInterval(displayTime, 500);
   </script>
-  
 </div>
 <div id="main">
   <p>A simple HTML page </p>
-  Using the <a href="https: //www.w3schools.com/html"> W3Schools template</a>
+  Using the <a href="https://www.w3schools.com/html"> W3Schools template</a>
   <hr>
   <b>Interaction with forms</b>
   <div>
@@ -54,8 +53,7 @@
   <div>
     <i>form With an HTTP POST Request</i>
     <form action="/echo.php" method="POST" name="echo_post">
-      your input: <input name="data"
-                         onkeypress="console.log('you have pressed a key')">
+      your input: <input name="data" onkeypress="console.log('you have pressed a key')">
       <input type="submit" value="Submit">
      </form>
   </div> 
