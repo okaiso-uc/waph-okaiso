@@ -1,6 +1,6 @@
 var shown = false;
-function showhideEmail(){
-  if    (shown){
+function showhideEmail() {
+   if   (shown){
       document.getElementById('email').innerHTML = "Show my email"; 
       shown = false;
   }else{ 
