@@ -30,14 +30,14 @@ This lab showcases a meticulous application of HTML and JavaScript concepts, emp
 - Implemented inline JavaScript within HTML tags to enhance interactivity:
   - Click events were utilized to display the current date/time in a designated area.
   - Key press events were logged to the browser console for debugging and interactivity feedback.
-  - ![part 1](Images/onclick.jpg) 
+  - ![Onclick](Images/onclick.jpg) 
 
 
 #### External JavaScript for Enhanced Functionality:
 - Developed an external JavaScript file (`email.js`) for showing/hiding an email address on a button click.
   - Promoted code modularity and maintainability by separating functionality into distinct files.
-    
-    ```js
+
+```js
 var shown = false;
 
 function showhideEmail() {
@@ -57,7 +57,7 @@ function showhideEmail() {
 }
 
 
-    ```
+  ```
 
     
 - Integrated another external JavaScript file (`clock.js`) to display an analog clock using the `<canvas>` element.
