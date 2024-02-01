@@ -18,7 +18,7 @@ This lab showcases a meticulous application of HTML and JavaScript concepts, emp
 - Developed a structured HTML document incorporating essential tags such as `<html>`, `<head>`, `<body>`, `<h1>`, `<p>`, and `<img>`.
 - Employed semantic HTML to enhance document structure and accessibility.
 - Integrated a form (`<form>`) within the HTML document to facilitate user input, demonstrating knowledge of form elements and attributes.
-- The form worked with the echo.php web application to post and get requests
+- The form worked with the echo.php web application to post and get HTML requests
   
 - #### Digital Clock:
 - Created a dynamic digital clock using JavaScript embedded within a `<script>` tag.
