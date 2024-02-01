@@ -62,10 +62,10 @@ function showhideEmail() {
     
 - Integrated another external JavaScript file (`clock.js`) to display an analog clock using the `<canvas>` element.
   - Utilized external resources to enhance functionality and keep code organized.
-[[ https://waph-uc.github.io/clock.js]]
+[( https://waph-uc.github.io/clock.js)]
 
 #### GitHub Repository Link:
 **Lab Folder**
-[[https://github.com/Sethoka1/waph-okaiso/tree/881c048f60a3d1084ef65ff9d2fb517daa184da5/labs/lab1]]
+[(https://github.com/Sethoka1/waph-okaiso/tree/881c048f60a3d1084ef65ff9d2fb517daa184da5/labs/lab1)]
 
 
