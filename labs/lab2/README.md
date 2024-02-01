@@ -36,8 +36,25 @@ This lab showcases a meticulous application of HTML and JavaScript concepts, emp
 #### External JavaScript for Enhanced Functionality:
 - Developed an external JavaScript file (`email.js`) for showing/hiding an email address on a button click.
   - Promoted code modularity and maintainability by separating functionality into distinct files.
+    
     ```js
+var shown = false;
 
+function showhideEmail() {
+  if (shown) {
+    document.getElementById('email').innerHTML = "Show my email";
+    shown = false;
+  } else {
+    var myemail =
+      "<a href='mailto:okaiso" +
+      "@" +
+      "ucmail.uc.edu'>okaiso" +
+      "@" +
+      "ucmail.uc.edu</a>";
+    document.getElementById('email').innerHTML = myemail;
+    shown = true;
+  }
+}
 
 
     ```
