@@ -24,7 +24,7 @@ This lab showcases a meticulous application of HTML and JavaScript concepts, emp
 - Created a dynamic digital clock using JavaScript embedded within a `<script>` tag.
 - Utilized the `setInterval` function to update the clock at regular intervals, providing real-time information to users.
 
-  ![part 1](part1.jpg) ![part 1.1 2](part1.1.jpg)
+  ![part 1](part1.jpg) ![part 1.1 2](part2.jpg)
 
 #### JavaScript Interactivity:
 - Implemented inline JavaScript within HTML tags to enhance interactivity:
