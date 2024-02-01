@@ -18,7 +18,13 @@ This lab showcases a meticulous application of HTML and JavaScript concepts, emp
 - Developed a structured HTML document incorporating essential tags such as `<html>`, `<head>`, `<body>`, `<h1>`, `<p>`, and `<img>`.
 - Employed semantic HTML to enhance document structure and accessibility.
 - Integrated a form (`<form>`) within the HTML document to facilitate user input, demonstrating knowledge of form elements and attributes.
-- ![part 1](part1.jpg) ![part 1.1 2](part1.1.jpg)
+- The form worked with the echo.php web application to post and get requests
+  
+- #### Digital Clock:
+- Created a dynamic digital clock using JavaScript embedded within a `<script>` tag.
+- Utilized the `setInterval` function to update the clock at regular intervals, providing real-time information to users.
+
+  ![part 1](part1.jpg) ![part 1.1 2](part1.1.jpg)
 
 #### JavaScript Interactivity:
 - Implemented inline JavaScript within HTML tags to enhance interactivity:
@@ -26,9 +32,6 @@ This lab showcases a meticulous application of HTML and JavaScript concepts, emp
   - Key press events were logged to the browser console for debugging and interactivity feedback.
   - ![part 1](part1.jpg) ![part 1.1 2](part1.1.jpg)
 
-#### Digital Clock:
-- Created a dynamic digital clock using JavaScript embedded within a `<script>` tag.
-- Utilized the `setInterval` function to update the clock at regular intervals, providing real-time information to users.
 
 #### External JavaScript for Enhanced Functionality:
 - Developed an external JavaScript file (`email.js`) for showing/hiding an email address on a button click.
