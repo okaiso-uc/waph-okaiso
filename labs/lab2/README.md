@@ -72,6 +72,7 @@ The Ajax request operates as follows: upon user interaction with the web page, t
 ### CSS
 I added CSS using inline, external, and internal methods.
 ![css](Images/css.jpg)
+
 ```Inline CSS
 <style>
   .button {
