@@ -30,7 +30,8 @@ In Lab 2, I  integrated HTML, CSS, JavaScript, jQuery, and Ajax to develop a dyn
 - Implemented inline JavaScript within HTML tags to enhance interactivity:
   - Click events were utilized to display the current date/time in a designated area.
   - Key press events were logged to the browser console for debugging and interactivity feedback.
-  - ![Onclick](Images/onclick.jpg) 
+    
+   ![Onclick](Images/onclick.jpg) 
 
 
 #### External JavaScript for Enhanced Functionality:
@@ -67,10 +68,12 @@ function showhideEmail() {
 ### Task 2
 ### Ajax
 The Ajax request operates as follows: upon user interaction with the web page, triggered by entering data into the input field and clicking the associated "Submit" button, the JavaScript function getEcho() is invoked. This function utilizes the XMLHttpRequest object to construct a GET request to the echo.php script with the user's input as a query parameter. The browser's developer tools, specifically the "Network" tab, allow for real-time inspection of this interaction. Upon triggering the Ajax request, a new entry appears in the network log, detailing the request method, headers, and the server's response. This technology enables asynchronous communication between a web page and a server. 
+
 ![Ajax](Images/ajax.jpg)
 
 ### CSS
 I added CSS using inline, external, and internal methods.
+
 ![css](Images/css.jpg)
 
 ***Internal CSS***
@@ -109,16 +112,20 @@ I added CSS using inline, external, and internal methods.
 
 ### Jquery
 I implemented HTML and JavaScript code in jQuery so that I can send an Ajax GET request to the echo.php web application and display the response content When the corresponding button is clicked.
+
  ![ajax](Images/ajax.jpg)
 
 I also implemented HTML and JavaScript code in jQuery so that I can send an Ajax post request to the echo.php web application and display the response content When the corresponding button is clicked.
+
  ![ajaxpost](Images/ajaxpost.jpg)
 
 ### WEB API Implementation
 I used jQuery Ajax to send a request and handle the response to display a random joke from an API when the page is loaded
+
 ![API1](Images/api1.jpg)
 
 I added HTML and JavaScript code to use the fetch() method to call an API with user input and display the response results. 
+
 ![API2](Images/api2.jpg)
  
 
