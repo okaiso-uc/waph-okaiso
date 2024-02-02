@@ -65,7 +65,7 @@ function showhideEmail() {
     [ https://waph-uc.github.io/clock.js]( https://waph-uc.github.io/clock.js)
 
 ### Task 2
-#### Ajax
+### Ajax
 The Ajax request operates as follows: upon user interaction with the web page, triggered by entering data into the input field and clicking the associated "Submit" button, the JavaScript function getEcho() is invoked. This function utilizes the XMLHttpRequest object to construct a GET request to the echo.php script with the user's input as a query parameter. The browser's developer tools, specifically the "Network" tab, allow for real-time inspection of this interaction. Upon triggering the Ajax request, a new entry appears in the network log, detailing the request method, headers, and the server's response. This technology enables asynchronous communication between a web page and a server. 
 ![Ajax](Images/ajax.jpg)
 
