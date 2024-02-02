@@ -2,8 +2,6 @@
 <html>
 <head>
 <meta charset="utf-8">
-<link rel="stylesheet"
-href=https://waph-uc.github.io/style1.css>
 <style>
   .button {
     background-color: #4CAF50;
@@ -26,6 +24,8 @@ href=https://waph-uc.github.io/style1.css>
     background-color: #ff9800;
   }
 </style>
+<link rel="stylesheet" href="https://waph-uc.github.io/style1.css">
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
 <title>WAPH-Seth Okai Student</title>
 </head>
 <body>
@@ -50,18 +50,17 @@ href=https://waph-uc.github.io/style1.css>
     radius = radius * 0.90;
     setInterval(drawClock, 1000);
 
-
     function drawClock() {
       drawFace(ctx, radius);
       drawNumbers(ctx, radius);
       drawTime(ctx, radius);
     }
 
-
     function displayTime() {
       document.getElementById('digital-clock').innerHTML = "Current time:" + new Date();
     }
     setInterval(displayTime, 500);
+
 
 
     function getEcho() {
@@ -72,22 +71,50 @@ href=https://waph-uc.github.io/style1.css>
 
       var xhttp = new XMLHttpRequest();
       xhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && 
-            this.status == 200){
+        if (this.readyState == 4 && this.status == 200){
           console.log("Received data="+xhttp.responseText);
-          document.getElementById("response").innerText=
-            "response from Server:" + xhttp.responseText;
-
-
+          document.getElementById("response").innerText = "response from Server:" + xhttp.responseText;
         }
-
-
       }
       xhttp.open("GET", "echo.php?data="+input, true);
       xhttp.send();
-      document.getElementById("data").value="";
-
+      document.getElementById("data").value = "";
     }
+
+    function jQueryAjaxget() {
+      var input = $("#data").val();
+      if (input.length == 0) {
+        return;
+      }
+
+      $.get("echo.php?data=" + input, function (result) {
+        $("#response").html("Response from server:" + result);
+      });
+
+      $("#data").val("");
+    }
+
+    
+    function jQueryAjaxpost() {
+  var input = $("#data").val();
+  if (input.length == 0) {
+    return;
+  }
+
+  $.post("echo.php", { data: input },
+    function (result) {
+      $("#response").html("Response from server:" + result);
+    });
+
+  $("#data").val("");
+}
+
+    $.get("https://v2.jokeapi.dev/joke/Programming?type=single",
+  function(result) {
+    console.log("From jokeAPI:" + JSON.stringify(result));
+    $("#response").html("A programming joke of the day: " + result.joke);
+  }
+);
 
 
   </script>
@@ -112,17 +139,18 @@ href=https://waph-uc.github.io/style1.css>
       your input: <input name="data" onkeypress="console.log('you have pressed a key')">
       <input type="submit" value="Submit">
      </form>
+  </div>
 
   <div>
     <i>Ajax requests</i><br>
-       Your input:
-       <input name="data"
-              onkeypress="console.log('you have press a key')" id="data">
-       <input class="button round" type="button"  value="Ajax Echo" onclick="getEcho()">
-       <div id="response"></div>
+    Your input:
+    <input name="data" onkeypress="console.log('you have press a key')" id="data">
+    <input class="button round" type="button" value="Ajax Echo" onclick="getEcho()">
+    <input class="button round" type="button" value="jQuery Ajax GET ECHO" onclick="jQueryAjaxget()">
+    <input class="button round" type="button" value="jQuery Ajax POST ECHO" onclick="jQueryAjaxpost()">
+    <div id="response"></div>
   </div>
-
-  </div> 
+  </div>
   <hr>
   <b>Experiments with Javascript code</b><br>
   <i>Inclined Javascript</i>
@@ -130,3 +158,4 @@ href=https://waph-uc.github.io/style1.css>
 </div>
 </body>
 </html>
+
