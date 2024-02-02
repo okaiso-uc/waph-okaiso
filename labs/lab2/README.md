@@ -6,11 +6,11 @@
 
 ![Seths's Headshot](Images/headshot.jpg)
 
-# Lab 1 - Front-end Web Development 
+# Lab 2 - Front-end Web Development 
 
 ## The lab's overview
 
-This lab showcases a meticulous application of HTML and JavaScript concepts, emphasizing not only the creation of a visually appealing web page but also the implementation of interactive features. By using both inline and external JavaScript, the lab demonstrates an understanding of code organization and modularity, essential principles for scalable and maintainable web development projects.
+In Lab 2, I  integrated HTML, CSS, JavaScript, jQuery, and Ajax to develop a dynamic and interactive web page. This lab not only builds upon the foundational concepts from Lab 1 but also introduces the integration of API concepts, adding a new layer of functionality to the web page.
 
 ### Part I - Task 1:
 
