@@ -73,7 +73,8 @@ The Ajax request operates as follows: upon user interaction with the web page, t
 I added CSS using inline, external, and internal methods.
 ![css](Images/css.jpg)
 
-```Inline CSS
+***Internal CSS***
+```Internal CSS
 <style>
   .button {
     background-color: #4CAF50;
@@ -97,9 +98,11 @@ I added CSS using inline, external, and internal methods.
   }
 </style
 ```
+***Inline CSS***
 ```Inline CSS
  <input class="button round" type="button" value="jQuery Ajax GET ECHO" onclick="jQueryAjaxget()">
 ```
+***External CSS***
 ```External CSS
 <link rel="stylesheet" href="https://waph-uc.github.io/style1.css">
 ```
