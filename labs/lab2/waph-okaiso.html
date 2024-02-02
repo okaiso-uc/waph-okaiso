@@ -116,6 +116,11 @@
   }
 );
 
+  async function guessAge(name) {
+  const response = await fetch("https://api.agify.io/?name=" + name);
+  const result = await response.json();
+  $("#response").html("Hi " + name + ", your age should be " + result.age);
+}
 
   </script>
 </div>
@@ -148,6 +153,7 @@
     <input class="button round" type="button" value="Ajax Echo" onclick="getEcho()">
     <input class="button round" type="button" value="jQuery Ajax GET ECHO" onclick="jQueryAjaxget()">
     <input class="button round" type="button" value="jQuery Ajax POST ECHO" onclick="jQueryAjaxpost()">
+    <input class="button round" type="button" value="guess Age" onclick="guessAge($('#data').val())">
     <div id="response"></div>
   </div>
   </div>
