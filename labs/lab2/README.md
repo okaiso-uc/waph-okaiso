@@ -19,8 +19,9 @@ In Lab 2, I  integrated HTML, CSS, JavaScript, jQuery, and Ajax to develop a dyn
 - Employed semantic HTML to enhance document structure and accessibility.
 - Integrated a form (`<form>`) within the HTML document to facilitate user input, demonstrating knowledge of form elements and attributes.
 - The form worked with the echo.php web application to post and get HTML requests
-  
-- #### Digital Clock:
+
+
+#### Digital Clock:
 - Created a dynamic digital clock using JavaScript embedded within a `<script>` tag.
 - Utilized the `setInterval` function to update the clock at regular intervals, providing real-time information to users.
 
@@ -77,7 +78,8 @@ I added CSS using inline, external, and internal methods.
 ![css](Images/css.jpg)
 
 ***Internal CSS***
-```Internal CSS
+
+```css
 <style>
   .button {
     background-color: #4CAF50;
@@ -102,13 +104,16 @@ I added CSS using inline, external, and internal methods.
 </style
 ```
 ***Inline CSS***
-```Inline CSS
+
+  ```css 
  <input class="button round" type="button" value="jQuery Ajax GET ECHO" onclick="jQueryAjaxget()">
 ```
+
 ***External CSS***
-```External CSS
-<link rel="stylesheet" href="https://waph-uc.github.io/style1.css">
-```
+
+  ```css
+  <link rel="stylesheet" href="https://waph-uc.github.io/style1.css">
+  ```
 
 ### Jquery
 I implemented HTML and JavaScript code in jQuery so that I can send an Ajax GET request to the echo.php web application and display the response content When the corresponding button is clicked.
