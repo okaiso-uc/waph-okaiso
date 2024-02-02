@@ -69,6 +69,40 @@ function showhideEmail() {
 The Ajax request operates as follows: upon user interaction with the web page, triggered by entering data into the input field and clicking the associated "Submit" button, the JavaScript function getEcho() is invoked. This function utilizes the XMLHttpRequest object to construct a GET request to the echo.php script with the user's input as a query parameter. The browser's developer tools, specifically the "Network" tab, allow for real-time inspection of this interaction. Upon triggering the Ajax request, a new entry appears in the network log, detailing the request method, headers, and the server's response. This technology enables asynchronous communication between a web page and a server. 
 ![Ajax](Images/ajax.jpg)
 
+### CSS
+I added CSS using inline, external, and internal methods.
+![css](Images/css.jpg)
+```Inline CSS
+<style>
+  .button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+
+  .round {
+    border-radius: 8px;
+  }
+
+  #response {
+    background-color: #ff9800;
+  }
+</style
+```
+```Inline CSS
+ <input class="button round" type="button" value="jQuery Ajax GET ECHO" onclick="jQueryAjaxget()">
+```
+```External CSS
+<link rel="stylesheet" href="https://waph-uc.github.io/style1.css">
+```
+
 ### Jquery
 I implemented HTML and JavaScript code in jQuery so that I can send an Ajax GET request to the echo.php web application and display the response content When the corresponding button is clicked.
  ![ajax](Images/ajax.jpg)
