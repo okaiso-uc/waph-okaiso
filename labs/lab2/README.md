@@ -116,10 +116,10 @@ I also implemented HTML and JavaScript code in jQuery so that I can send an Ajax
 
 ### WEB API Implementation
 I used jQuery Ajax to send a request and handle the response to display a random joke from an API when the page is loaded
-![API1](Images/api1)
+![API1](Images/api1.jpg)
 
 I added HTML and JavaScript code to use the fetch() method to call an API with user input and display the response results. 
-![API2](Images/api2)
+![API2](Images/api2.jpg)
  
 
 
