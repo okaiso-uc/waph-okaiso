@@ -34,8 +34,6 @@ For Level 2, I utilized a POST request to inject an XSS payload into the applica
 ![level3](Images/level3.jpg)
 Since the script tags are being filtered I used the src attribute to point to a nonexistent image this causes the onerror event to be triggered executing my Javascript code
 
-![level3](Images/level3.jpg)
-
 
 
 ### Level 4
