@@ -56,9 +56,11 @@ For my echo .php file I added input validation and sanitization to the PHP scrip
 
 ![PHPdefense](Images/defense1.jpg)
 
+
 I updated the email.js code with input validation and encoding features. By using a regular expression pattern, input validation reduces the possibility of accepting malicious or incorrect data by guaranteeing that user-provided data—in this case, an email address—follows a predetermined standard. Furthermore, I used the encodeInput() function to implement encoding, which escapes any HTML special characters in the input before displaying it on the webpage. The code improves the application's security by reducing the possibility of both cross-site scripting (XSS) attacks and malicious data.
 
 ![emailjs](Images/email.jsdefense.jpg)
+
 
 In my html code , robust defenses against Cross-Site Scripting (XSS) attacks were implemented through input sanitization and encoding. The sanitizeInput function utilizes a regular expression to remove any <script> tags from user input, ensuring that no malicious scripts can be injected into the application. Additionally, the encodeURIComponent function is used to encode the sanitized input before sending it to the server via XMLHttpRequest or jQuery Ajax requests. This encoding mechanism protects against XSS vulnerabilities by converting special characters into their respective encoded representations, thereby preventing script injection attacks. 
 
