@@ -13,7 +13,12 @@ In my XSS exploitation endeavors, I successfully compromised Levels 2, 4, 5, and
 
 ## Task 1 Attack
 
+###Level 0
+For level 0 I just executed a script and it worked because there were not any defenses set up for the site.
+![level0](Images/level0.jpg)
+
 ### Level 1
+For level 1 i just had to change the quotes to single quotes to bypass any defenses
 ![level1](Images/level1.jpg)
 
 ### Level 2
