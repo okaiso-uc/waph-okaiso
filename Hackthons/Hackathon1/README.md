@@ -48,5 +48,5 @@ I updated the email.js code with input validation and encoding features. By usin
 
 ![emailjs](Images/email.jsdefense.jpg)
 
-
+In my html code , robust defenses against Cross-Site Scripting (XSS) attacks were implemented through input sanitization and encoding. The sanitizeInput function utilizes a regular expression to remove any <script> tags from user input, ensuring that no malicious scripts can be injected into the application. Additionally, the encodeURIComponent function is used to encode the sanitized input before sending it to the server via XMLHttpRequest or jQuery Ajax requests. This encoding mechanism protects against XSS vulnerabilities by converting special characters into their respective encoded representations, thereby preventing script injection attacks. 
 
