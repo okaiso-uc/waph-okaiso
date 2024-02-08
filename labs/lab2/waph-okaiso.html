@@ -61,10 +61,6 @@
     }
     setInterval(displayTime, 500);
 
-    function sanitizeInput(input) {
-      return input.replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, ''); // Removing script tags
-    }
-
     function getEcho() {
       var input =  document.getElementById("data").value;
       if (input.trim() === "") { // Input validation
@@ -126,15 +122,13 @@
 );
 
   async function guessAge(name) {
-  if (name.trim() === "") { // Input validation
-    alert("Name field cannot be empty");
-    return;
-  }
-  
-  name = sanitizeInput(name); // Sanitize input
-  const response = await fetch("https://api.agify.io/?name=" + encodeURIComponent(name)); // Encoding input
+  const response = await fetch("https://api.agify.io/?name=" + name);
   const result = await response.json();
   $("#response").html("Hi " + name + ", your age should be " + result.age);
+}
+
+function sanitizeInput(input) {
+  return input.replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, ''); // Removing script tags
 }
   </script>
 </div>
