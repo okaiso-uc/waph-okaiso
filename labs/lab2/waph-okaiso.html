@@ -61,19 +61,23 @@
     }
     setInterval(displayTime, 500);
 
+    function sanitizeInput(input) {
+      return input.replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, ''); // Removing script tags
+    }
+
     function getEcho() {
-      var input =  document.getElementById("data").value;
+      var input = document.getElementById("data").value;
       if (input.trim() === "") { // Input validation
         alert("Input field cannot be empty");
         return;
       }
-      
-      input = input.replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, ''); // Removing script tags
+
+      input = sanitizeInput(input); // Sanitize input
       var encodedInput = encodeURIComponent(input); // Encoding input
       var xhttp = new XMLHttpRequest();
       xhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200){
-          console.log("Received data="+xhttp.responseText);
+        if (this.readyState == 4 && this.status == 200) {
+          console.log("Received data=" + xhttp.responseText);
           document.getElementById("response").innerText = "response from Server:" + xhttp.responseText;
         }
       }
@@ -88,27 +92,27 @@
         alert("Input field cannot be empty");
         return;
       }
-      
-      input = input.replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, ''); // Removing script tags
+
+      input = sanitizeInput(input); // Sanitize input
       var encodedInput = encodeURIComponent(input); // Encoding input
-      $.get("echo.php?data=" + encodedInput, function (result) {
+      $.get("echo.php?data=" + encodedInput, function(result) {
         $("#response").html("Response from server:" + result);
       });
 
       $("#data").val("");
     }
 
-    
+
     function jQueryAjaxpost() {
       var input = $("#data").val();
       if (input.trim() === "") { // Input validation
         alert("Input field cannot be empty");
         return;
       }
-      
-      input = input.replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, ''); // Removing script tags
+
+      input = sanitizeInput(input); // Sanitize input
       var encodedInput = encodeURIComponent(input); // Encoding input
-      $.post("echo.php", { data: encodedInput }, function (result) {
+      $.post("echo.php", { data: encodedInput }, function(result) {
         $("#response").html("Response from server:" + result);
       });
 
@@ -116,22 +120,22 @@
     }
 
     $.get("https://v2.jokeapi.dev/joke/Programming?type=single",
-  function(result) {
-    console.log("From jokeAPI:" + JSON.stringify(result));
-    $("#response").html("A programming joke of the day: " + result.joke);
-  }
-);
+      function(result) {
+        console.log("From jokeAPI:" + JSON.stringify(result));
+        $("#response").html("A programming joke of the day: " + result.joke);
+      }
+    );
 
-  async function guessAge(name) {
-    if (name.trim() === "") { // Input validation
-      alert("Name field cannot be empty");
-      return;
+    async function guessAge(name) {
+      if (name.trim() === "") { // Input validation
+        alert("Name field cannot be empty");
+        return;
+      }
+
+      const response = await fetch("https://api.agify.io/?name=" + encodeURIComponent(name));
+      const result = await response.json();
+      $("#response").html("Hi " + name + ", your age should be " + result.age);
     }
-    
-    const response = await fetch("https://api.agify.io/?name=" + encodeURIComponent(name));
-    const result = await response.json();
-    $("#response").html("Hi " + name + ", your age should be " + result.age);
-  }
   </script>
 </div>
 <div id="main">
@@ -145,15 +149,15 @@
     <form action="/echo.php" method="GET">
       your input: <input name="data">
       <input type="submit" value="Submit">
-     </form>
-  </div> 
+    </form>
+  </div>
 
   <div>
     <i>form With an HTTP POST Request</i>
     <form action="/echo.php" method="POST" name="echo_post">
       your input: <input name="data" onkeypress="console.log('you have pressed a key')">
       <input type="submit" value="Submit">
-     </form>
+    </form>
   </div>
 
   <div>
@@ -166,11 +170,11 @@
     <input class="button round" type="button" value="guess Age" onclick="guessAge($('#data').val())">
     <div id="response"></div>
   </div>
-  </div>
-  <hr>
-  <b>Experiments with Javascript code</b><br>
-  <i>Inclined Javascript</i>
-  <div id="date" onclick="document.getElementById('date').innerHTML= Date()">Click here to show Date()</div>
+</div>
+<hr>
+<b>Experiments with Javascript code</b><br>
+<i>Inclined Javascript</i>
+<div id="date" onclick="document.getElementById('date').innerHTML= Date()">Click here to show Date()</div>
 </div>
 </body>
 </html>
