@@ -15,13 +15,11 @@ In my XSS exploitation endeavors, I successfully compromised Levels 2, 4, 5, and
 ## Task 1 Attack
 
 ### Level 0
-
 For level 0 I just executed a script in the url and it worked because there were not any defenses set up for the site.
 
 ![level0](Images/level0.jpg)
 
 ### Level 1
-
 For level 1 i just had to change the quotes to single quotes to bypass any defenses
 
 ![level1](Images/level1.jpg)
@@ -41,13 +39,11 @@ Level 5 posed a challenge due to script tag filtering. However, I overcame this 
 
 
 ### Level 6
-
 In Level 6, I utilized an obfuscated JavaScript payload to bypass server-side defenses. Despite potential input validation and sanitization measures, the payload successfully executed, triggering the alert message as intended.
 ![level6](Images/level6.jpg)
 
 
 ## Task 2 Defense
-
 For my echo .php file I added input validation and sanitization to the PHP script. First, I checked if the 'data' field was set in the request using isset(), ensuring it was provided by the user. If not, I generated an error message and terminated the script. For input sanitization, I utilized the htmlentities() function to convert special characters to HTML entities, mitigating potential XSS attacks by rendering harmful code harmless when displayed in the browser. This implementation offers basic protection, but I recognize the importance of customizing validation and sanitization based on specific application requirements for robust security measures.
 ![PHPdefense](Images/defense1.jpg)
 
