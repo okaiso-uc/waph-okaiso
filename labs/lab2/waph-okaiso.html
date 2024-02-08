@@ -62,7 +62,7 @@
     setInterval(displayTime, 500);
 
     function getEcho() {
-      var input =  document.getElementById("dataEcho").value;
+      var input =  document.getElementById("data").value;
       if (input.trim() === "") { // Input validation
         alert("Input field cannot be empty");
         return;
@@ -79,11 +79,11 @@
       }
       xhttp.open("GET", "echo.php?data=" + encodedInput, true);
       xhttp.send();
-      document.getElementById("dataEcho").value = "";
+      document.getElementById("data").value = "";
     }
 
     function jQueryAjaxget() {
-      var input = $("#dataGet").val();
+      var input = $("#data").val();
       if (input.trim() === "") { // Input validation
         alert("Input field cannot be empty");
         return;
@@ -95,11 +95,12 @@
         $("#response").html("Response from server:" + result);
       });
 
-      $("#dataGet").val("");
+      $("#data").val("");
     }
 
+    
     function jQueryAjaxpost() {
-      var input = $("#dataPost").val();
+      var input = $("#data").val();
       if (input.trim() === "") { // Input validation
         alert("Input field cannot be empty");
         return;
@@ -111,25 +112,26 @@
         $("#response").html("Response from server:" + result);
       });
 
-      $("#dataPost").val("");
+      $("#data").val("");
     }
 
-    function guessAge() {
-      var name = $("#dataGet").val(); // Using the AJAX input field
-      if (name.trim() === "") { // Input validation
-        alert("Name field cannot be empty");
-        return;
-      }
+    $.get("https://v2.jokeapi.dev/joke/Programming?type=single",
+  function(result) {
+    console.log("From jokeAPI:" + JSON.stringify(result));
+    $("#response").html("A programming joke of the day: " + result.joke);
+  }
+);
 
-      fetch("https://api.agify.io/?name=" + encodeURIComponent(name))
-        .then(response => response.json())
-        .then(data => {
-          $("#response").html("Hi " + name + ", your age should be " + data.age);
-        })
-        .catch(error => {
-          console.error('Error:', error);
-        });
+  async function guessAge(name) {
+    if (name.trim() === "") { // Input validation
+      alert("Name field cannot be empty");
+      return;
     }
+    
+    const response = await fetch("https://api.agify.io/?name=" + encodeURIComponent(name));
+    const result = await response.json();
+    $("#response").html("Hi " + name + ", your age should be " + result.age);
+  }
   </script>
 </div>
 <div id="main">
@@ -139,32 +141,36 @@
   <b>Interaction with forms</b>
 
   <div>
-    <i>Form With an HTTP GET Request</i>
-    <form action="/echo.php" method="GET" onsubmit="return false;">
-      Your input: <input name="data" id="dataEcho">
-      <input type="button" class="button round" value="Submit" onclick="getEcho()">
-    </form>
+    <i>form With an HTTP GET Request</i>
+    <form action="/echo.php" method="GET">
+      your input: <input name="data">
+      <input type="submit" value="Submit">
+     </form>
   </div> 
 
   <div>
-    <i>Form With an HTTP GET Request (AJAX)</i>
-    <input name="data" id="dataGet">
-    <input type="button" class="button round" value="Submit" onclick="jQueryAjaxget()">
+    <i>form With an HTTP POST Request</i>
+    <form action="/echo.php" method="POST" name="echo_post">
+      your input: <input name="data" onkeypress="console.log('you have pressed a key')">
+      <input type="submit" value="Submit">
+     </form>
   </div>
 
   <div>
-    <i>Form With an HTTP POST Request</i>
-    <input name="data" id="dataPost">
-    <input type="button" class="button round" value="Submit" onclick="jQueryAjaxpost()">
+    <i>Ajax requests</i><br>
+    Your input:
+    <input name="data" onkeypress="console.log('you have press a key')" id="data">
+    <input class="button round" type="button" value="Ajax Echo" onclick="getEcho()">
+    <input class="button round" type="button" value="jQuery Ajax GET ECHO" onclick="jQueryAjaxget()">
+    <input class="button round" type="button" value="jQuery Ajax POST ECHO" onclick="jQueryAjaxpost()">
+    <input class="button round" type="button" value="guess Age" onclick="guessAge($('#data').val())">
+    <div id="response"></div>
   </div>
-
-  <div>
-    <i>Guess Age</i>
-    <input name="name" id="name" placeholder="Enter your name">
-    <input type="button" class="button round" value="Submit" onclick="guessAge()">
   </div>
-
-  <div id="response"></div>
+  <hr>
+  <b>Experiments with Javascript code</b><br>
+  <i>Inclined Javascript</i>
+  <div id="date" onclick="document.getElementById('date').innerHTML= Date()">Click here to show Date()</div>
 </div>
 </body>
 </html>
