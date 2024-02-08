@@ -152,4 +152,25 @@
     <i>form With an HTTP POST Request</i>
     <form action="/echo.php" method="POST" name="echo_post">
       your input: <input name="data" onkeypress="console.log('you have pressed a key')">
-      <in
+      <input type="submit" value="Submit">
+     </form>
+  </div>
+
+  <div>
+    <i>Ajax requests</i><br>
+    Your input:
+    <input name="data" onkeypress="console.log('you have press a key')" id="data">
+    <input class="button round" type="button" value="Ajax Echo" onclick="getEcho()">
+    <input class="button round" type="button" value="jQuery Ajax GET ECHO" onclick="jQueryAjaxget()">
+    <input class="button round" type="button" value="jQuery Ajax POST ECHO" onclick="jQueryAjaxpost()">
+    <input class="button round" type="button" value="guess Age" onclick="guessAge($('#data').val())">
+    <div id="response"></div>
+  </div>
+  </div>
+  <hr>
+  <b>Experiments with Javascript code</b><br>
+  <i>Inclined Javascript</i>
+  <div id="date" onclick="document.getElementById('date').innerHTML= Date()">Click here to show Date()</div>
+</div>
+</body>
+</html>
