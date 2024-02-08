@@ -9,7 +9,7 @@
 # Hackathon 1 - Cross-site Scripting Attacks and Defenses
 
 ## The lab's overview
-In my XSS exploitation endeavors, I successfully compromised Levels 2, 4, 5, and 6 of the target web application while encountering difficulties with Level 3. My methods involved crafting and executing JavaScript payloads through various injection points, showcasing vulnerabilities in the application's input handling mechanisms.
+In my XSS exploitation endeavors, I successfully compromised Levels 2, 4, 5, and 6 of the target web application while encountering difficulties with Level 3. My methods involved crafting and executing JavaScript payloads through various injection points, showcasing vulnerabilities in the application's input handling mechanisms.I also revised my vulnerable, insecure code in Lab 1 and Lab 2 by implementing input validation and XSS defense methods 
 
 ### Level 1
 ![level1](Images/level1.jpg)
