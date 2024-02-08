@@ -128,4 +128,38 @@
 }
   </script>
 </div>
-<div id
+<div id="main">
+  <p>A simple HTML page </p>
+  Using the <a href="https://www.w3schools.com/html"> W3Schools template</a>
+  <hr>
+  <b>Interaction with forms</b>
+
+  <div>
+    <i>Form With an HTTP GET Request</i>
+    <form action="/echo.php" method="GET" onsubmit="return validateForm(this)">
+      Your input: <input name="data" id="data">
+      <input type="submit" value="Submit">
+    </form>
+  </div> 
+
+  <div>
+    <i>Form With an HTTP POST Request</i>
+    <form action="/echo.php" method="POST" name="echo_post" onsubmit="return validateForm(this)">
+      Your input: <input name="data" id="data">
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+
+  <div>
+    <i>Ajax requests</i><br>
+    Your input:
+    <input name="data" id="data" onkeypress="console.log('you have press a key')">
+    <input class="button round" type="button" value="Ajax Echo" onclick="getEcho()">
+    <input class="button round" type="button" value="jQuery Ajax GET ECHO" onclick="jQueryAjaxget()">
+    <input class="button round" type="button" value="jQuery Ajax POST ECHO" onclick="jQueryAjaxpost()">
+    <input class="button round" type="button" value="guess Age" onclick="guessAge($('#data').val())">
+    <div id="response"></div>
+  </div>
+</div>
+</body>
+</html>
