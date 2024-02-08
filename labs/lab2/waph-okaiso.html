@@ -115,7 +115,7 @@
     }
 
     function guessAge() {
-      var name = $("#name").val();
+      var name = $("#dataGet").val(); // Using the AJAX input field
       if (name.trim() === "") { // Input validation
         alert("Name field cannot be empty");
         return;
@@ -130,13 +130,6 @@
           console.error('Error:', error);
         });
     }
-
-    $.get("https://v2.jokeapi.dev/joke/Programming?type=single",
-  function(result) {
-    console.log("From jokeAPI:" + JSON.stringify(result));
-    $("#response").html("A programming joke of the day: " + result.joke);
-  }
-);
   </script>
 </div>
 <div id="main">
@@ -147,29 +140,31 @@
 
   <div>
     <i>Form With an HTTP GET Request</i>
-    <form onsubmit="return false;">
+    <form action="/echo.php" method="GET" onsubmit="return false;">
       Your input: <input name="data" id="dataEcho">
-      <input type="button" value="Submit" onclick="getEcho()">
+      <input type="button" class="button round" value="Submit" onclick="getEcho()">
     </form>
   </div> 
 
   <div>
-    <i>Form With an HTTP POST Request</i>
-    <form onsubmit="return false;">
-      Your input: <input name="data" id="dataPost">
-      <input type="button" value="Submit" onclick="jQueryAjaxpost()">
-    </form>
+    <i>Form With an HTTP GET Request (AJAX)</i>
+    <input name="data" id="dataGet">
+    <input type="button" class="button round" value="Submit" onclick="jQueryAjaxget()">
   </div>
 
   <div>
-    <i>Ajax requests</i><br>
-    Your input:
-    <input name="data" id="dataGet" onkeypress="console.log('you have press a key')">
-    <input class="button round" type="button" value="Ajax Echo" onclick="jQueryAjaxget()">
-    <input class="button round" type="button" value="Guess Age" onclick="guessAge()">
-    <div>Name: <input type="text" id="name"></div>
-    <div id="response"></div>
+    <i>Form With an HTTP POST Request</i>
+    <input name="data" id="dataPost">
+    <input type="button" class="button round" value="Submit" onclick="jQueryAjaxpost()">
   </div>
+
+  <div>
+    <i>Guess Age</i>
+    <input name="name" id="name" placeholder="Enter your name">
+    <input type="button" class="button round" value="Submit" onclick="guessAge()">
+  </div>
+
+  <div id="response"></div>
 </div>
 </body>
 </html>
