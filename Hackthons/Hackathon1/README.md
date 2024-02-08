@@ -45,6 +45,7 @@ For my echo .php file I added input validation and sanitization to the PHP scrip
 
 
 I updated the email.js code with input validation and encoding features. By using a regular expression pattern, input validation reduces the possibility of accepting malicious or incorrect data by guaranteeing that user-provided data—in this case, an email address—follows a predetermined standard. Furthermore, I used the encodeInput() function to implement encoding, which escapes any HTML special characters in the input before displaying it on the webpage. The code improves the application's security by reducing the possibility of both cross-site scripting (XSS) attacks and malicious data.
+
 ![emailjs](Images/email.jsdefense.jpg)
 
 
