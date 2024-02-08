@@ -62,7 +62,7 @@
     setInterval(displayTime, 500);
 
     function getEcho() {
-      var input =  document.getElementById("data").value;
+      var input =  document.getElementById("dataEcho").value;
       if (input.trim() === "") { // Input validation
         alert("Input field cannot be empty");
         return;
@@ -79,11 +79,11 @@
       }
       xhttp.open("GET", "echo.php?data=" + encodedInput, true);
       xhttp.send();
-      document.getElementById("data").value = "";
+      document.getElementById("dataEcho").value = "";
     }
 
     function jQueryAjaxget() {
-      var input = $("#data").val();
+      var input = $("#dataGet").val();
       if (input.trim() === "") { // Input validation
         alert("Input field cannot be empty");
         return;
@@ -95,11 +95,11 @@
         $("#response").html("Response from server:" + result);
       });
 
-      $("#data").val("");
+      $("#dataGet").val("");
     }
 
     function jQueryAjaxpost() {
-      var input = $("#data").val();
+      var input = $("#dataPost").val();
       if (input.trim() === "") { // Input validation
         alert("Input field cannot be empty");
         return;
@@ -111,7 +111,24 @@
         $("#response").html("Response from server:" + result);
       });
 
-      $("#data").val("");
+      $("#dataPost").val("");
+    }
+
+    function guessAge() {
+      var name = $("#name").val();
+      if (name.trim() === "") { // Input validation
+        alert("Name field cannot be empty");
+        return;
+      }
+
+      fetch("https://api.agify.io/?name=" + encodeURIComponent(name))
+        .then(response => response.json())
+        .then(data => {
+          $("#response").html("Hi " + name + ", your age should be " + data.age);
+        })
+        .catch(error => {
+          console.error('Error:', error);
+        });
     }
 
     $.get("https://v2.jokeapi.dev/joke/Programming?type=single",
@@ -120,12 +137,6 @@
     $("#response").html("A programming joke of the day: " + result.joke);
   }
 );
-
-  async function guessAge(name) {
-  const response = await fetch("https://api.agify.io/?name=" + encodeURIComponent(name)); // Encoding input
-  const result = await response.json();
-  $("#response").html("Hi " + name + ", your age should be " + result.age);
-}
   </script>
 </div>
 <div id="main">
@@ -136,28 +147,27 @@
 
   <div>
     <i>Form With an HTTP GET Request</i>
-    <form action="/echo.php" method="GET" onsubmit="return validateForm(this)">
-      Your input: <input name="data" id="data">
-      <input type="submit" value="Submit">
+    <form onsubmit="return false;">
+      Your input: <input name="data" id="dataEcho">
+      <input type="button" value="Submit" onclick="getEcho()">
     </form>
   </div> 
 
   <div>
     <i>Form With an HTTP POST Request</i>
-    <form action="/echo.php" method="POST" name="echo_post" onsubmit="return validateForm(this)">
-      Your input: <input name="data" id="data">
-      <input type="submit" value="Submit">
+    <form onsubmit="return false;">
+      Your input: <input name="data" id="dataPost">
+      <input type="button" value="Submit" onclick="jQueryAjaxpost()">
     </form>
   </div>
 
   <div>
     <i>Ajax requests</i><br>
     Your input:
-    <input name="data" id="data" onkeypress="console.log('you have press a key')">
-    <input class="button round" type="button" value="Ajax Echo" onclick="getEcho()">
-    <input class="button round" type="button" value="jQuery Ajax GET ECHO" onclick="jQueryAjaxget()">
-    <input class="button round" type="button" value="jQuery Ajax POST ECHO" onclick="jQueryAjaxpost()">
-    <input class="button round" type="button" value="guess Age" onclick="guessAge($('#data').val())">
+    <input name="data" id="dataGet" onkeypress="console.log('you have press a key')">
+    <input class="button round" type="button" value="Ajax Echo" onclick="jQueryAjaxget()">
+    <input class="button round" type="button" value="Guess Age" onclick="guessAge()">
+    <div>Name: <input type="text" id="name"></div>
     <div id="response"></div>
   </div>
 </div>
