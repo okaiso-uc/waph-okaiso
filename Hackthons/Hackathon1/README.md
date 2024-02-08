@@ -35,3 +35,4 @@ In Level 6, I utilized an obfuscated JavaScript payload to bypass server-side de
 
 
 ## Task 2 Defense
+For my echo .php file I was able to,
