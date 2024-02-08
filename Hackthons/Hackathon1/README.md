@@ -29,6 +29,12 @@ For level 1 i just had to change the quotes to single quotes to bypass any defen
 ![level2](Images/level2.jpg)
 For Level 2, I utilized a POST request to inject an XSS payload into the application. By submitting a crafted payload through the console, I triggered an alert message, demonstrating the ability to execute arbitrary JavaScript code on the target page.
 
+### Level 3
+Since the script tags are being filtered I used the src attribute to point to a nonexistent image this causes the onerror event to be triggered executing my Javascript code
+
+![level3](Images/level3.jpg)
+For Level 3, I utilized a POST request to inject an XSS payload into the application. By submitting a crafted payload through the console, I triggered an alert message, demonstrating the ability to execute arbitrary JavaScript code on the target page.
+
 
 ### Level 4
 
