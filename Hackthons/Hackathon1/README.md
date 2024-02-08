@@ -36,4 +36,4 @@ In Level 6, I utilized an obfuscated JavaScript payload to bypass server-side de
 
 ## Task 2 Defense
 For my echo .php file I added input validation and sanitization to the PHP script. First, I checked if the 'data' field was set in the request using isset(), ensuring it was provided by the user. If not, I generated an error message and terminated the script. For input sanitization, I utilized the htmlentities() function to convert special characters to HTML entities, mitigating potential XSS attacks by rendering harmful code harmless when displayed in the browser. This implementation offers basic protection, but I recognize the importance of customizing validation and sanitization based on specific application requirements for robust security measures.
-![PHPdefense](defense1.jpg)
+![PHPdefense](Images/defense1.jpg)
