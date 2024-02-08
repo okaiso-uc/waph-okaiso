@@ -11,6 +11,8 @@
 ## The lab's overview
 In my XSS exploitation endeavors, I successfully compromised Levels 2, 4, 5, and 6 of the target web application while encountering difficulties with Level 3. My methods involved crafting and executing JavaScript payloads through various injection points, showcasing vulnerabilities in the application's input handling mechanisms.I also revised my vulnerable, insecure code in Lab 1 and Lab 2 by implementing input validation and XSS defense methods 
 
+## Task 1 Attack
+
 ### Level 1
 ![level1](Images/level1.jpg)
 
@@ -30,3 +32,6 @@ Level 5 posed a challenge due to script tag filtering. However, I overcame this 
 ### Level 6
 In Level 6, I utilized an obfuscated JavaScript payload to bypass server-side defenses. Despite potential input validation and sanitization measures, the payload successfully executed, triggering the alert message as intended.
 ![level6](Images/level6.jpg)
+
+
+## Task 2 Defense
