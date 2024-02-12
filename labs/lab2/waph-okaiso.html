@@ -1,174 +1,182 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="utf-8">
-<style>
-  .button {
-    background-color: #4CAF50;
-    border: none;
-    color: white;
-    padding: 5px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 12px;
-    margin: 4px 2px;
-    cursor: pointer;
-  }
-
-  .round {
-    border-radius: 8px;
-  }
-
-  #response {
-    background-color: #ff9800;
-  }
-</style>
-<link rel="stylesheet" href="https://waph-uc.github.io/style1.css">
-<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
-<title>WAPH-Seth Okai Student</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seth Okai - Professional Profile</title>
+    <style>
+        /* Add your CSS styling here */
+    </style>
 </head>
 <body>
-<div id="top">
-  <h1>Web Application Programming and Hacking</h1>
-  <h2>Front-end Web Development Lab</h2>
-  <h3>Instructor: Dr. Phu Phung</h3>
-</div>
-<div id="menubar">
-  <h3>Student: Seth Okai</h3>
-  <div id="email" onclick="showhideEmail()">Show my email</div>
-  <script src="email.js"></script>
-  <img src="Images/headshot.jpg" alt="My Headshot" width="50">
-  <div id="digital-clock"></div>
-  <canvas id="analog-clock" width="150" height="150" style="background-color:#999"></canvas>
-  <script src="https://waph-uc.github.io/clock.js"></script>
-  <script type="text/javascript">
-    var canvas = document.getElementById("analog-clock");
-    var ctx = canvas.getContext("2d");
-    var radius = canvas.height / 2;
-    ctx.translate(radius, radius);
-    radius = radius * 0.90;
-    setInterval(drawClock, 1000);
+    <header>
+        <h1>Seth Okai</h1>
+        <img src="Images/headshot.jpg" alt="Seth Okai's Headshot">
+        <p>Security Analyst</p>
+    </header>
+    <section id="contact">
+        <h2>Contact Information</h2>
+        <p>453 Smiley Avenue Springdale OH</p>
+        <p>Phone: 513-592-9077</p>
+        <p>Email: <span id="email">Show my email</span></p>
+        <input type="text" id="emailInput" placeholder="Enter your email">
+        <button onclick="showEmail()">Toggle Email</button>
+    </section>
+    <section id="background">
+        <h2>Background</h2>
+        <h3>Education</h3>
+        <p>Information Technology / Associate of Applied Business</p>
+        <p>University of Cincinnati, (Blue Ash Campus) OH</p>
+        <p>Pertinent Coursework: System Administration, Computer programming, Database Management, Web development</p>
+        <p>2020 - 2022</p>
+        <p>Cybersecurity, Data Technologies/ Bachelor of science</p>
+        <p>University of Cincinnati, (Main campus) OH</p>
+        <p>Pertinent Coursework: Cybercrime, Network Security, Network Infrastructure, contemporary database systems, System analysis and design.</p>
+        <p>2022 - 2025</p>
+    </section>
+    <section id="experience">
+        <h2>Work Experience</h2>
+        <p>Cybersecurity College Intern</p>
+        <p>Ohio Department of Administrative services.</p>
+        <ul>
+            <li>Conducts threat and vulnerability assessments, identifies deviations, and measures defense-in-depth effectiveness.</li>
+            <li>Assists in identifying systemic security issues, preparing vulnerability reports, and supporting incident response.</li>
+            <li>Supports security system monitoring, tuning, and documentation of incident response processes.</li>
+            <li>May 2023 - Current</li>
+        </ul>
+        <p>Summer Tech Assistant/ Intern</p>
+        <p>Wintonwoods Highschool Cincinnati</p>
+        <ul>
+            <li>Analyzed and determined an effective local technology Infrastructure.</li>
+            <li>Repaired Hardware and software issues pertaining to Chromebooks.</li>
+            <li>Received and attended to helpdesk tickets requested by students and staff.</li>
+            <li>May, 2022 - August, 2022</li>
+        </ul>
+    </section>
+    <section id="skills">
+        <h2>Skills</h2>
+        <h3>Professional Skills</h3>
+        <ul>
+            <li>Positivity</li>
+            <li>Problem solving</li>
+        </ul>
+        <h3>Technical Skills</h3>
+        <ul>
+            <li>Teamwork</li>
+            <li>Attention to detail</li>
+            <li>Risk analysis</li>
+            <li>Incident response</li>
+            <li>Data analytics</li>
+            <li>Intrusion detection</li>
+        </ul>
+    </section>
+    <section id="projects">
+        <h2>Relevant Projects</h2>
+        <p>Project: Censible Chrome Extension - Best Social Impact Hack, RevolutionUC Hackathon 2023</p>
+        <p>Developed a chrome extension called Censible that filters out inappropriate images and text in a browser to create a safer browsing experience for parents and children, and people with different types of fears, such as arachnophobia. Censible uses a combination of artificial intelligence and user-defined filters to detect and block unwanted content.</p>
+    </section>
+    <section id="certifications">
+        <h2>Certifications</h2>
+        <ul>
+            <li>CC—Certified in Cybersecurity—(ISC)2 (2023)</li>
+            <li>VMDR- Vulnerability Management Detection & Response - Qualys (2023)</li>
+            <li>CASM- Cybersecurity Asset Management - Qualys (2023)</li>
+        </ul>
+    </section>
+    <footer>
+        <p>&copy; 2024 Seth Okai</p>
+        <!-- Link to WAPH.html -->
+        <p><a href="waph.html">Go to WAPH Site</a></p>
+        <!-- Digital clock -->
+        <p id="clock"></p>
+    </footer>
 
-    function drawClock() {
-      drawFace(ctx, radius);
-      drawNumbers(ctx, radius);
-      drawTime(ctx, radius);
-    }
+    <!-- jQuery library -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Clock script -->
+    <script>
+        $(document).ready(function() {
+            function updateClock() {
+                var now = new Date();
+                var time = now.toLocaleTimeString();
+                $('#clock').text(time);
+            }
+            setInterval(updateClock, 1000);
+        });
+    </script>
+    <!-- Function to show/hide email -->
+    <script>
+        var emailVisible = false;
 
-    function displayTime() {
-      document.getElementById('digital-clock').innerHTML = "Current time:" + new Date();
-    }
-    setInterval(displayTime, 500);
-
-    function getEcho() {
-      var input =  document.getElementById("data").value;
-      if (input.trim() === "") {
-        alert("Input field cannot be empty");
-        return;
-      }
-      
-      input = sanitizeInput(input);
-      var encodedInput = encodeURIComponent(input);
-      var xhttp = new XMLHttpRequest();
-      xhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200){
-          console.log("Received data="+xhttp.responseText);
-          document.getElementById("response").innerText = "response from Server:" + xhttp.responseText;
+        function showEmail() {
+            var emailSpan = document.getElementById('email');
+            if (!emailVisible) {
+                var emailInput = document.getElementById('emailInput').value;
+                if (validateEmail(emailInput)) {
+                    emailSpan.innerHTML = emailInput;
+                    emailVisible = true;
+                } else {
+                    alert('Invalid email address');
+                }
+            } else {
+                emailSpan.textContent = 'Show my email';
+                emailVisible = false;
+            }
         }
-      }
-      xhttp.open("GET", "echo.php?data=" + encodedInput, true);
-      xhttp.send();
-      document.getElementById("data").value = "";
-    }
 
-    function jQueryAjaxget() {
-      var input = $("#data").val();
-      if (input.trim() === "") {
-        alert("Input field cannot be empty");
-        return;
-      }
-      
-      input = sanitizeInput(input);
-      var encodedInput = encodeURIComponent(input);
-      $.get("echo.php?data=" + encodedInput, function (result) {
-        $("#response").html("Response from server:" + result);
-      });
+        function validateEmail(email) {
+            var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailPattern.test(email);
+        }
+    </script>
+    <!-- Fetch joke from jokeapi every minute -->
+    <script>
+        setInterval(function() {
+            fetch('https://v2.jokeapi.dev/joke/Programming?type=single')
+            .then(response => response.json())
+            .then(data => {
+                console.log(data.joke);
+                document.getElementById('jokeContent').textContent = data.joke;
+            })
+            .catch(error => console.error('Error fetching joke:', error));
+        }, 60000); // Fetch a new joke every minute (60 seconds)
+    </script>
+    <!-- Fetch weather information from weatherbit.io -->
+    <script>
+        // Replace 'YOUR_API_KEY' with your actual Weatherbit API key
+        var weatherApiKey = 'YOUR_API_KEY';
+        fetch('https://api.weatherbit.io/v2.0/current?city=London&key=' + weatherApiKey)
+        .then(response => response.json())
+        .then(data => {
+            console.log(data);
+            // Process and display weather information as needed
+        })
+        .catch(error => console.error('Error fetching weather:', error));
+    </script>
+    <!-- Set cookie for last visit -->
+    <script>
+        // Function to set a cookie
+        function setCookie(cname, cvalue, exdays) {
+            var d = new Date();
+            d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+            var expires = 'expires=' + d.toUTCString();
+            document.cookie = cname + '=' + cvalue + ';' + expires + ';path=/';
+        }
 
-      $("#data").val("");
-    }
+        // Check if the cookie exists
+        var lastVisit = getCookie('lastVisit');
+        if (lastVisit === '') {
+            // First-time visit
+            alert('Welcome to my homepage!');
+        } else {
+            // Returning visitor
+            alert('Welcome back! Your last visit was ' + lastVisit);
+        }
 
-    function jQueryAjaxpost() {
-      var input = $("#data").val();
-      if (input.trim() === "") {
-        alert("Input field cannot be empty");
-        return;
-      }
-      
-      input = sanitizeInput(input);
-      var encodedInput = encodeURIComponent(input);
-      $.post("echo.php", { data: encodedInput }, function (result) {
-        $("#response").html("Response from server:" + result);
-      });
-
-      $("#data").val("");
-    }
-
-    $.get("https://v2.jokeapi.dev/joke/Programming?type=single",
-  function(result) {
-    console.log("From jokeAPI:" + JSON.stringify(result));
-    $("#response").html("A programming joke of the day: " + result.joke);
-  }
-);
-
-  async function guessAge(name) {
-  const response = await fetch("https://api.agify.io/?name=" + name);
-  const result = await response.json();
-  $("#response").html("Hi " + name + ", your age should be " + result.age);
-}
-
-function sanitizeInput(input) {
-  return input.replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '');
-}
-  </script>
-</div>
-<div id="main">
-  <p>A simple HTML page </p>
-  Using the <a href="https://www.w3schools.com/html"> W3Schools template</a>
-  <hr>
-  <b>Interaction with forms</b>
-  
-  <div>
-    <i>form With an HTTP GET Request</i>
-    <form action="/echo.php" method="GET">
-      your input: <input name="data">
-      <input type="submit" value="Submit">
-     </form>
-  </div> 
-
-  <div>
-    <i>form With an HTTP POST Request</i>
-    <form action="/echo.php" method="POST" name="echo_post">
-      your input: <input name="data">
-      <input type="submit" value="Submit">
-     </form>
-  </div>
-
-  <div>
-    <i>Ajax requests</i><br>
-    Your input:
-    <input name="data" id="data">
-    <input class="button round" type="button" value="Ajax Echo" onclick="getEcho()">
-    <input class="button round" type="button" value="jQuery Ajax GET ECHO" onclick="jQueryAjaxget()">
-    <input class="button round" type="button" value="jQuery Ajax POST ECHO" onclick="jQueryAjaxpost()">
-    <input class="button round" type="button" value="guess Age" onclick="guessAge($('#data').val())">
-    <div id="response"></div>
-  </div>
-  </div>
-  <hr>
-  <b>Experiments with Javascript code</b><br>
-  <i>Inclined Javascript</i>
-  <div id="date" onclick="document.getElementById('date').innerHTML= Date()">Click here to show Date()</div>
-</div>
+        // Set cookie for the current visit
+        var now = new Date();
+        var formattedDate = now.toUTCString();
+        setCookie('lastVisit', formattedDate, 365); // Cookie expires in 1 year
+    </script>
 </body>
 </html>
