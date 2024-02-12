@@ -19,8 +19,7 @@
         <p>453 Smiley Avenue Springdale OH</p>
         <p>Phone: 513-592-9077</p>
         <p>Email: <span id="email">Show my email</span></p>
-        <input type="text" id="emailInput" placeholder="Enter your email">
-        <button onclick="showEmail()">Toggle Email</button>
+        <button onclick="toggleEmail()">Toggle Email</button>
     </section>
     <section id="background">
         <h2>Background</h2>
@@ -83,6 +82,18 @@
             <li>CASM- Cybersecurity Asset Management - Qualys (2023)</li>
         </ul>
     </section>
+    <section id="joke">
+        <h2>Joke of the Day</h2>
+        <p id="jokeContent">Loading...</p>
+    </section>
+    <section id="analog-clock">
+        <h2>Analog Clock</h2>
+        <canvas id="analogClock" width="150" height="150" style="background-color:#999"></canvas>
+    </section>
+    <section id="weather">
+        <h2>Weather Information</h2>
+        <p id="weatherInfo">Loading...</p>
+    </section>
     <footer>
         <p>&copy; 2024 Seth Okai</p>
         <!-- Link to WAPH.html -->
@@ -108,25 +119,15 @@
     <script>
         var emailVisible = false;
 
-        function showEmail() {
+        function toggleEmail() {
             var emailSpan = document.getElementById('email');
             if (!emailVisible) {
-                var emailInput = document.getElementById('emailInput').value;
-                if (validateEmail(emailInput)) {
-                    emailSpan.innerHTML = emailInput;
-                    emailVisible = true;
-                } else {
-                    alert('Invalid email address');
-                }
+                emailSpan.textContent = 'okaiso@mail.uc.edu';
+                emailVisible = true;
             } else {
                 emailSpan.textContent = 'Show my email';
                 emailVisible = false;
             }
-        }
-
-        function validateEmail(email) {
-            var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            return emailPattern.test(email);
         }
     </script>
     <!-- Fetch joke from jokeapi every minute -->
@@ -153,30 +154,92 @@
         })
         .catch(error => console.error('Error fetching weather:', error));
     </script>
-    <!-- Set cookie for last visit -->
+    <!-- Analog clock script -->
     <script>
-        // Function to set a cookie
-        function setCookie(cname, cvalue, exdays) {
-            var d = new Date();
-            d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
-            var expires = 'expires=' + d.toUTCString();
-            document.cookie = cname + '=' + cvalue + ';' + expires + ';path=/';
+        function drawClock() {
+            var canvas = document.getElementById('analogClock');
+            var ctx = canvas.getContext('2d');
+            var radius = canvas.height / 2;
+            ctx.translate(radius, radius);
+            radius = radius * 0.90;
+            setInterval(drawClock, 1000);
+
+            function drawFace(ctx, radius) {
+                ctx.beginPath();
+                ctx.arc(0, 0, radius, 0, 2 * Math.PI);
+                ctx.fillStyle = 'white';
+                ctx.fill();
+                var grad;
+
+                grad = ctx.createRadialGradient(0, 0, radius * 0.95, 0, 0, radius * 1.05);
+                grad.addColorStop(0, '#333');
+                grad.addColorStop(0.5, 'white');
+                grad.addColorStop(1, '#333');
+                ctx.strokeStyle = grad;
+                ctx.lineWidth = radius * 0.1;
+                ctx.stroke();
+                ctx.beginPath();
+                ctx.arc(0, 0, radius * 0.1, 0, 2 * Math.PI);
+                ctx.fillStyle = '#333';
+                ctx.fill();
+            }
+
+            function drawNumbers(ctx, radius) {
+                var ang;
+                var num;
+                ctx.font = radius * 0.15 + 'px arial';
+                ctx.textBaseline = 'middle';
+                ctx.textAlign = 'center';
+                for (num = 1; num < 13; num++) {
+                    ang = num * Math.PI / 6;
+                    ctx.rotate(ang);
+                    ctx.translate(0, -radius * 0.85);
+                    ctx.rotate(-ang);
+                    ctx.fillText(num.toString(), 0, 0);
+                    ctx.rotate(ang);
+                    ctx.translate(0, radius * 0.85);
+                    ctx.rotate(-ang);
+                }
+            }
+
+            function drawTime(ctx, radius) {
+                var now = new Date();
+                var hour = now.getHours();
+                var minute = now.getMinutes();
+                var second = now.getSeconds();
+                //hour
+                hour = hour % 12;
+                hour = (hour * Math.PI / 6) +
+                    (minute * Math.PI / (6 * 60)) +
+                    (second * Math.PI / (360 * 60));
+                drawHand(ctx, hour, radius * 0.5, radius * 0.07);
+                //minute
+                minute = (minute * Math.PI / 30) + (second * Math.PI / (30 * 60));
+                drawHand(ctx, minute, radius * 0.8, radius * 0.07);
+                // second
+                second = (second * Math.PI / 30);
+                drawHand(ctx, second, radius * 0.9, radius * 0.02);
+            }
+
+            function drawHand(ctx, pos, length, width) {
+                ctx.beginPath();
+                ctx.lineWidth = width;
+                ctx.lineCap = 'round';
+                ctx.moveTo(0, 0);
+                ctx.rotate(pos);
+                ctx.lineTo(0, -length);
+                ctx.stroke();
+                ctx.rotate(-pos);
+            }
+
+            function drawClock() {
+                drawFace(ctx, radius);
+                drawNumbers(ctx, radius);
+                drawTime(ctx, radius);
+            }
         }
 
-        // Check if the cookie exists
-        var lastVisit = getCookie('lastVisit');
-        if (lastVisit === '') {
-            // First-time visit
-            alert('Welcome to my homepage!');
-        } else {
-            // Returning visitor
-            alert('Welcome back! Your last visit was ' + lastVisit);
-        }
-
-        // Set cookie for the current visit
-        var now = new Date();
-        var formattedDate = now.toUTCString();
-        setCookie('lastVisit', formattedDate, 365); // Cookie expires in 1 year
+        drawClock();
     </script>
 </body>
 </html>
