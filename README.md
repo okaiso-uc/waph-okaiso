@@ -22,7 +22,7 @@ This is a private repository for Seth Okai to store all code from the course. Th
 
 [Hands-on exercises in lectures](labs)
 
-  - [Lab 0](labs/lab0): Development Environment Setup 
+  - <a herf="https://github.com/okaiso-uc/waph-okaiso/tree/89c6fd575a7debe743d5ce2242ea43ac553d381f/labs/lab0">Lab 0</a>: Development Environment Setup 
   - [Lab 1](labs/lab1): Foundations of the Web
   - [lab 2](labs/lab2): Front-end Web Development
 
