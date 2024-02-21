@@ -3,4 +3,4 @@ CREATE TABLE users (
   password VARCHAR(100) NOT NULL
 );
 
-INSERT INTO users(username, password) VALUES ('...', MD5('12345'));
+INSERT INTO users(username, password) VALUES ('admin', MD5('12345'));
