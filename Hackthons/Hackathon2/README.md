@@ -4,7 +4,7 @@
 ## Student: Seth Okai
 
 - Email: seth.okai@example.com
-- 
+  
 ![Seth's Headshot](Images/headshot.jpg)
 
 # Hackathon 1 - Cross-site Scripting Attacks and Defenses
