@@ -2,7 +2,9 @@
 ## Instructor: Dr. Phu Phung
 
 ## Student: Seth Okai
+
 - Email: seth.okai@example.com
+- 
 ![Seth's Headshot](Images/headshot.jpg)
 
 # Hackathon 1 - Cross-site Scripting Attacks and Defenses
@@ -13,43 +15,41 @@ This hackathon consists of three levels with multiple sub-tasks.
 
 ### Level 0
 - **Description**: I  Injected SQL code with my University’s username to bypass the login check and successfully log in to the system.
-[level0](Images/level0.png)
+[level0](Images/level 0.png)
 
 ### Level 1
-- **Description**: Guessed the SQL string in the back-end and injected SQL code with your University’s username to bypass the login check and successfully log in to the system.
+- **Description**:Injected SQL code leveraging the UNION SELECT statement to display specific information on the page. Utilized the LIMIT function in conjunction with the SQL injection payload to ensure only the desired information is retrieved.
+  [level01](Images/level1.png)
 
-### Level 2
-The objective of Level 2 is to demonstrate advanced SQL injection techniques to exploit vulnerabilities in a more secure environment.
+### Level 2 - Exploiting SQLi to Access Data
+
+#### Sub-task: Identify the Number of Columns
+I found out the number of columns was 3 by using Union Select and identifying which query worked for the number of columns I tried to select.
 
 
-#### a. Detecting SQLi Vulnerabilities
+- **Description**: Utilized SQL injection techniques to identify the number of columns in the database table. Experimented with different payloads including UNION SELECT statements to determine the correct number of columns required for injection.
+[level2.i](Images/level2.ia.png)
 
-- **Description**: Explored the application to identify potential SQLi vulnerabilities and discovered vulnerable parts of the application.
+#### Sub-task: Display Your Information
 
-#### b. Exploiting SQLi to Access Data
+- **Description**: 
 
-**i. Identify the Number of Columns**:
+#### Sub-task: Display the Database Schema
 
-- **Description**: Used SQL injection techniques to determine the number of columns in the database table.
+- **Description**: Exploited SQLi vulnerabilities to retrieve the entire database schema. Used SQL injection techniques to extract information about all tables and their columns in the database.
 
-**ii. Display Your Information**:
+[level2.III](Images/level2.III.png)
 
-- **Description**: Injected SQL code to display university username, name, and section on the page.
 
-**iii. Display the Database Schema**:
+#### Sub-task: Display Login Credentials
 
-- **Description**: Exploited SQLi vulnerabilities to retrieve the entire database schema.
+- **Description**: Identified the table and columns storing usernames and passwords in the database. Constructed an SQL injection query incorporating the LIMIT function to display a limited number of rows containing login credentials.
 
-**iv. Display Login Credentials**:
+[level2.iv](Images/level2.iv.png)
+[level2.ivc](Images/level2.ivc.png)
 
-- **Description**: Identified the table and columns storing usernames and passwords. Constructed an SQLi query to display all usernames and passwords stored in the database.
+#### Sub-task: Login with Stolen Credentials
 
-#### c. Login with Stolen Credentials
-
-- **Description**: Used the stolen credentials to log in to the system.
-
-## Conclusion
-
-Successfully completed all sub-tasks of Level 2, demonstrating proficiency in advanced SQL injection techniques.
+- **Description**: Utilized stolen login credentials obtained through SQL injection to log in to the system. Demonstrated the successful exploitation of SQLi vulnerabilities to gain unauthorized access to the application.
 
 
