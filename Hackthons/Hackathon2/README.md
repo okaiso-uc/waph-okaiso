@@ -29,9 +29,9 @@ This hackathon consists of three levels with multiple sub-tasks.
 
 ### Level 2 - Exploiting SQLi to Access Data
 
-## Detecting SQLi Vulnerabiliti
+### Detecting SQLi Vulnerabilities
 
-![level2.i](Images/levl2.1.png)
+![level2.i](Images/levl2.1b.png)
 
 - **Description**: used different inputs to see if the application responds in a way that indicates a vulnerability. An example of an error page above tells me I got the number of columns wrong.
 
