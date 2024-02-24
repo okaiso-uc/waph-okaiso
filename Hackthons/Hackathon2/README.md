@@ -58,10 +58,9 @@ I found out the number of columns was 3 by using Union Select and identifying wh
 #### Sub-task: Display the Database Schema
 
 
-![level2.III](Images/level2.III.jpg)
-
 - **Description**: Exploited SQLi vulnerabilities to retrieve the entire database schema. Used SQL injection techniques to extract information about all tables and their columns in the database.
 
+![level2.III](Images/level2.III.jpg)
 
 
 #### Sub-task: Display Login Credentials
