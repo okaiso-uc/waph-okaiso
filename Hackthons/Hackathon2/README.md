@@ -49,11 +49,10 @@ I found out the number of columns was 3 by using Union Select and identifying wh
 
 #### Sub-task: Display Your Information
 
-
- ![level2.iib](Images/level2.ii.png)
-
  
  **Description**: I Injected SQL code that displays my university’s username, name, and section on the page.
+ 
+  ![level2.iib](Images/level2.ii.png)
 
 
 #### Sub-task: Display the Database Schema
