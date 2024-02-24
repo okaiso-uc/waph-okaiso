@@ -41,16 +41,23 @@ I found out the number of columns was 3 by using Union Select and identifying wh
 
 ![2.ia](Images/2.ia.jpg)
 
-- **Description**: Utilized SQL injection techniques to identify the number of columns in the database table. I experimented with different payloads including UNION SELECT statements to determine the correct number of columns required for injection.
+
+**Description**: Utilized SQL injection techniques to identify the number of columns in the database table. I experimented with different payloads including UNION SELECT statements to determine the correct number of columns required for injection.
+
+
 
 
 #### Sub-task: Display Your Information
 
+
  ![level2.iib](Images/level2.ii.png)
 
+ 
+ **Description**: I Injected SQL code that displays my university’s username, name, and section on the page.
 
 
 #### Sub-task: Display the Database Schema
+
 
 ![level2.III](Images/level2.III.jpg)
 
@@ -60,9 +67,10 @@ I found out the number of columns was 3 by using Union Select and identifying wh
 
 #### Sub-task: Display Login Credentials
 
+- **Description**: Identified the table and columns storing usernames and passwords in the database. Constructed an SQL injection query incorporating the LIMIT function to display a limited number of rows containing login credentials.
+  
 ![level2.iv](Images/level2.iv.jpg)
 
-- **Description**: Identified the table and columns storing usernames and passwords in the database. Constructed an SQL injection query incorporating the LIMIT function to display a limited number of rows containing login credentials.
 
 
 #### Sub-task: Login with Stolen Credentials
