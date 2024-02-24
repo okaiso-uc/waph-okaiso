@@ -60,7 +60,7 @@ I found out the number of columns was 3 by using Union Select and identifying wh
 
 #### Sub-task: Display Login Credentials
 
-![level2.iv](Images/Level2.iv.png)
+![level2.iv](Images/level2.iv.png)
 
 - **Description**: Identified the table and columns storing usernames and passwords in the database. Constructed an SQL injection query incorporating the LIMIT function to display a limited number of rows containing login credentials.
 
