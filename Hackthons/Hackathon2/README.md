@@ -10,8 +10,8 @@
 
 ## Overview and Requirements
 
-This hackathon consists of three levels with multiple sub-tasks.
 
+In my SQLi exploitation endeavors, I successfully attacked all of the levels of the target web application. My methods involved crafting and executing Sql payloads through various injection points, showcasing vulnerabilities in the application's.
 ### Level 0
 
 ![level0](Images/level0.jpg)
