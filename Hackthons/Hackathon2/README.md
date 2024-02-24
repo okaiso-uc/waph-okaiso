@@ -15,7 +15,7 @@ This hackathon consists of three levels with multiple sub-tasks.
 
 ### Level 0
 - **Description**: I  Injected SQL code with my University’s username to bypass the login check and successfully log in to the system.
-![level0](Images/level 0.png)
+![level0](Images/level0.png)
 
 ### Level 1
 - **Description**:Injected SQL code leveraging the UNION SELECT statement to display specific information on the page. Utilized the LIMIT function in conjunction with the SQL injection payload to ensure only the desired information is retrieved.
@@ -28,7 +28,7 @@ I found out the number of columns was 3 by using Union Select and identifying wh
 
 
 - **Description**: Utilized SQL injection techniques to identify the number of columns in the database table. Experimented with different payloads including UNION SELECT statements to determine the correct number of columns required for injection.
-![level2.i](Images/level2.ia.png)
+![level2.i](Images/Level2.ia.png)
 
 #### Sub-task: Display Your Information
 
