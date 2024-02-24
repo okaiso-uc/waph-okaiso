@@ -28,7 +28,7 @@ I found out the number of columns was 3 by using Union Select and identifying wh
 
 
 - **Description**: Utilized SQL injection techniques to identify the number of columns in the database table. Experimented with different payloads including UNION SELECT statements to determine the correct number of columns required for injection.
-![level2.i](Images/Level2.ia.png)
+![level2.i](Images/2.ia.png)
 
 #### Sub-task: Display Your Information
 
