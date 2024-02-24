@@ -46,7 +46,7 @@ I found out the number of columns was 3 by using Union Select and identifying wh
 
 #### Sub-task: Display Your Information
 
- ![level2.iib](Images/level2.ii.jpg)
+ ![level2.iib](Images/level2.ii.png)
 
 
 
