@@ -31,7 +31,7 @@ This hackathon consists of three levels with multiple sub-tasks.
 
 ### Detecting SQLi Vulnerabilities
 
-![level2.i](Images/level2.1b.jpg)
+![level2.ib](Images/level2.1b.jpg)
 
 - **Description**: used different inputs to see if the application responds in a way that indicates a vulnerability. An example of an error page above tells me I got the number of columns wrong.
 
@@ -39,14 +39,14 @@ This hackathon consists of three levels with multiple sub-tasks.
 
 I found out the number of columns was 3 by using Union Select and identifying which query worked for the number of columns I tried to select.
 
-![level2.i](Images/2.ia.jpg)
+![2.ia](Images/2.ia.jpg)
 
 - **Description**: Utilized SQL injection techniques to identify the number of columns in the database table. I experimented with different payloads including UNION SELECT statements to determine the correct number of columns required for injection.
 
 
 #### Sub-task: Display Your Information
 
- ![level2.1b](Images/level2.ii.jpg)
+ ![level2.iib](Images/level2.ii.jpg)
 
 
 
