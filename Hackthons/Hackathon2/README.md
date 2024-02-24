@@ -45,11 +45,15 @@ I found out the number of columns was 3 by using Union Select and identifying wh
 
 - **Description**: Identified the table and columns storing usernames and passwords in the database. Constructed an SQL injection query incorporating the LIMIT function to display a limited number of rows containing login credentials.
 
-![level2.iv](Images/level2.iv.png)
-![level2.ivc](Images/level2.ivc.png)
+![level2.iv](Images/Level2.iv.png)
+
 
 #### Sub-task: Login with Stolen Credentials
 
 - **Description**: Utilized stolen login credentials obtained through SQL injection to log in to the system. Demonstrated the successful exploitation of SQLi vulnerabilities to gain unauthorized access to the application.
+- Used the hash to find the password
+![level2.ivc](Images/level2.ivc.png)
+
+![revealhash](Images/revealhash.png)
 
 
