@@ -25,7 +25,6 @@ This hackathon consists of three levels with multiple sub-tasks.
   ![level2.1b](Images/levl2.1b.png)
 
 ### Level 2 - Exploiting SQLi to Access Data
-  ![level01](Images/level1.png)
 
 #### Sub-task: Identify the Number of Columns
 
@@ -36,8 +35,9 @@ I found out the number of columns was 3 by using Union Select and identifying wh
 ![level2.i](Images/2.ia.png)
 
 #### Sub-task: Display Your Information
+ ![level2.1b](Images/levl2.1b.png)
 
-- **Description**: 
+- **Description**: used different inputs to see if the application responds in a way that indicates a vulnerability. An example of an error page above tells me I got the number of columns wrong.
 
 #### Sub-task: Display the Database Schema
 
