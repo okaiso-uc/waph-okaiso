@@ -13,7 +13,7 @@
 
 In my SQLi exploitation endeavors, I successfully attacked all of the levels of the target web application. My methods involved crafting and executing Sql payloads through various injection points, showcasing vulnerabilities in the application's.
 ### Level 0
-
+![Seth's Headshot](Images/headshot.jpg)
 ![level0](Images/level0.jpg)
 
 - **Description**: I  Injected SQL code with my University’s username to bypass the login check and successfully log in to the system.
