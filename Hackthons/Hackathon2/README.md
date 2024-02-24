@@ -71,8 +71,8 @@ I found out the number of columns was 3 by using Union Select and identifying wh
   
 - Used the hash to find the password
   
-![level2.ivc](Images/level2.ivc.png)
+![level2.ivc](Images/level2.ivc.jpg)
 
-![revealhash](Images/revealhash.png)
+![revealhash](Images/revealhash.jpg)
 
 
