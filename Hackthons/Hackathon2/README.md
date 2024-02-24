@@ -12,7 +12,8 @@
 This hackathon consists of three levels with multiple sub-tasks.
 
 ### Level 0
-- **Description**: I  Injected SQL code to show my University’s username to bypass the login check and successfully log in to the system.
+- **Description**: I  Injected SQL code with my University’s username to bypass the login check and successfully log in to the system.
+[level0](Images/level0.png)
 
 ### Level 1
 - **Description**: Guessed the SQL string in the back-end and injected SQL code with your University’s username to bypass the login check and successfully log in to the system.
