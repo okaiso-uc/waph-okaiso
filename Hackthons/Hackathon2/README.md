@@ -22,9 +22,10 @@ This hackathon consists of three levels with multiple sub-tasks.
 
 - **Description**:Injected SQL code leveraging the UNION SELECT statement to display specific information on the page. Utilized the LIMIT function in conjunction with the SQL injection payload to ensure only the desired information is retrieved.
   
-  ![level01](Images/level1.png)
+  ![level2.1b](Images/levl2.1b.png)
 
 ### Level 2 - Exploiting SQLi to Access Data
+  ![level01](Images/level1.png)
 
 #### Sub-task: Identify the Number of Columns
 
