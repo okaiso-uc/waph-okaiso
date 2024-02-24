@@ -15,11 +15,11 @@ This hackathon consists of three levels with multiple sub-tasks.
 
 ### Level 0
 - **Description**: I  Injected SQL code with my University’s username to bypass the login check and successfully log in to the system.
-[level0](Images/level 0.png)
+![level0](Images/level 0.png)
 
 ### Level 1
 - **Description**:Injected SQL code leveraging the UNION SELECT statement to display specific information on the page. Utilized the LIMIT function in conjunction with the SQL injection payload to ensure only the desired information is retrieved.
-  [level01](Images/level1.png)
+  ![level01](Images/level1.png)
 
 ### Level 2 - Exploiting SQLi to Access Data
 
@@ -28,7 +28,7 @@ I found out the number of columns was 3 by using Union Select and identifying wh
 
 
 - **Description**: Utilized SQL injection techniques to identify the number of columns in the database table. Experimented with different payloads including UNION SELECT statements to determine the correct number of columns required for injection.
-[level2.i](Images/level2.ia.png)
+![level2.i](Images/level2.ia.png)
 
 #### Sub-task: Display Your Information
 
@@ -38,15 +38,15 @@ I found out the number of columns was 3 by using Union Select and identifying wh
 
 - **Description**: Exploited SQLi vulnerabilities to retrieve the entire database schema. Used SQL injection techniques to extract information about all tables and their columns in the database.
 
-[level2.III](Images/level2.III.png)
+![level2.III](Images/level2.III.png)
 
 
 #### Sub-task: Display Login Credentials
 
 - **Description**: Identified the table and columns storing usernames and passwords in the database. Constructed an SQL injection query incorporating the LIMIT function to display a limited number of rows containing login credentials.
 
-[level2.iv](Images/level2.iv.png)
-[level2.ivc](Images/level2.ivc.png)
+![level2.iv](Images/level2.iv.png)
+![level2.ivc](Images/level2.ivc.png)
 
 #### Sub-task: Login with Stolen Credentials
 
