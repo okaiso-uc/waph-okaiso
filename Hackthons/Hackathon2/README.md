@@ -31,7 +31,7 @@ This hackathon consists of three levels with multiple sub-tasks.
 
 ### Detecting SQLi Vulnerabilities
 
-![level2.i](Images/level2.1b.jpg)
+![level2.i](Images/levl2.1b.jpg)
 
 - **Description**: used different inputs to see if the application responds in a way that indicates a vulnerability. An example of an error page above tells me I got the number of columns wrong.
 
