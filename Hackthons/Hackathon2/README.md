@@ -14,14 +14,14 @@ This hackathon consists of three levels with multiple sub-tasks.
 
 ### Level 0
 
-![level0](Images/level0.png)
+![level0](Images/level0.jpg)
 
 - **Description**: I  Injected SQL code with my University’s username to bypass the login check and successfully log in to the system.
 
   
 ### Level 1
 
-  ![level1](Images/level1.png)
+  ![level1](Images/level1.jpg)
   
 - **Description**:Injected SQL code leveraging the UNION SELECT statement to display specific information on the page. Utilized the LIMIT function in conjunction with the SQL injection payload to ensure only the desired information is retrieved.
   
@@ -31,7 +31,7 @@ This hackathon consists of three levels with multiple sub-tasks.
 
 ### Detecting SQLi Vulnerabilities
 
-![level2.i](Images/levl2.1b.png)
+![level2.i](Images/levl2.1b.jpg)
 
 - **Description**: used different inputs to see if the application responds in a way that indicates a vulnerability. An example of an error page above tells me I got the number of columns wrong.
 
@@ -39,20 +39,20 @@ This hackathon consists of three levels with multiple sub-tasks.
 
 I found out the number of columns was 3 by using Union Select and identifying which query worked for the number of columns I tried to select.
 
-![level2.i](Images/2.ia.png)
+![level2.i](Images/2.ia.jpg)
 
 - **Description**: Utilized SQL injection techniques to identify the number of columns in the database table. I experimented with different payloads including UNION SELECT statements to determine the correct number of columns required for injection.
 
 
 #### Sub-task: Display Your Information
 
- ![level2.1b](Images/level2.ii.png)
+ ![level2.1b](Images/level2.ii.jpg)
 
 
 
 #### Sub-task: Display the Database Schema
 
-![level2.III](Images/level2.III.png)
+![level2.III](Images/level2.III.jpg)
 
 - **Description**: Exploited SQLi vulnerabilities to retrieve the entire database schema. Used SQL injection techniques to extract information about all tables and their columns in the database.
 
@@ -60,7 +60,7 @@ I found out the number of columns was 3 by using Union Select and identifying wh
 
 #### Sub-task: Display Login Credentials
 
-![level2.iv](Images/level2.iv.png)
+![level2.iv](Images/level2.iv.jpg)
 
 - **Description**: Identified the table and columns storing usernames and passwords in the database. Constructed an SQL injection query incorporating the LIMIT function to display a limited number of rows containing login credentials.
 
