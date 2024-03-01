@@ -44,4 +44,39 @@ INSERT INTO users(username,password) VALUES ('admin, md5('MyPa$$w0rd));
 ## A Simple (Insecure)Login System with PHP/MySQL
 - I installed PHP PHP MySQLi extension with sudo apt-get install php-mysqli, and restarted Apache using sudo service apache2 restart.
 -  I modified index.php by adding a checklogin_mysql function in index.php for database programming authentication
--  I then Deployed  form.php and the modified index.php and tested the login functionality.
+- 
+ ```
+	function checklogin_mysql($username, $password) {
+		$mysqli = new mysqli('localhost', 'okaiso', '12345', 'waph');
+		if ($mysqli->connect_errno) {
+			printf("Database connection failed: %s\n", $mysqli->connect_error);
+			exit(); 
+		}
+
+		
+		return false;
+	}
+```
+
+- I was able to log in successfully with the username and password from my database and 
+insecurely with the following code options in index.php:
+
+String Concat in PHP 
+
+```
+$sql = "SELECT * FROM users where username='" . $username . "' "; 
+$sql = $sql . " AND password = md5('" . $password . "')";
+```
+
+```
+Variable Injection into String 
+$username = $POST["username"]; 
+$password = $POST["password"]; 
+$sql = "SELECT * FROM users WHERE username='$username' AND password= md5('$password)
+```
+
+
+-  I then Deployed form.php and the modified index.php and tested the login functionality.
+  [ss3](Images/ss3.png)
+
+  
