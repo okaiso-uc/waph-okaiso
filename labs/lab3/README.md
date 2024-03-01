@@ -90,13 +90,21 @@ $sql = "SELECT * FROM users WHERE username='$username' AND password= md5('$passw
 
 ### XSS Attack
 - The site is vulnerable to XSS due to the lack of Input Validation and Output Encoding
+  
 I was able to attack this site with the code : admin '#<script>alert(document.cookie)</script>
 ![ss5](Images/ss5.png)
 
 
 ### Prepared Statement Implementation
 
+- Prepared statements protect against SQL injection by keeping SQL code separate from user-entered data. They first build the SQL query and then add user data as predetermined parameters. This blocks attackers from adding their own SQL code, making the query less likely to be manipulated.
+```
 
+```
+
+Testing sql injection with Implentation in place:
+
+![ss6](Images/ss6.png)
   
 
   
