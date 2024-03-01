@@ -99,12 +99,24 @@ I was able to attack this site with the code : admin '#<script>alert(document.co
 
 - Prepared statements protect against SQL injection by keeping SQL code separate from user-entered data. They first build the SQL query and then add user data as predetermined parameters. This blocks attackers from adding their own SQL code, making the query less likely to be manipulated.
 ```
-
+$prepared_sql = "SELECT * FROM users where username=? AND password=md5(?);";
+		$stmt = $mysqli->prepare($prepared_sql);
+		$stmt->bind_param("ss", $username,$password);
+		$stmt->execute();
+		$result = $stmt->get_result();
+		if($result->num_rows ==1)
+			return TRUE;
+		return FALSE;
 ```
 
-Testing sql injection with Implentation in place:
+- Testing sql injection with Implentation in place:
 
 ![ss6](Images/ss6.png)
+
+- To mitigate XSS risks, I enhanced the code to sanitize outputs by using the htmlspecialchars function. Here's the revised code snippet:
+  ```
+
+  ```
   
 
   
