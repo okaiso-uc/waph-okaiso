@@ -119,5 +119,13 @@ $prepared_sql = "SELECT * FROM users where username=? AND password=md5(?);";
 		 die();
   ```
   
+  - Output from XSS Attack
+  
+![ss7](Images/ss7.png)
+
+
+
+
+ Discussion: The PHP code has major flaws that threaten security and functionality. Firstly, the absence of input validation fails to address empty username or password fields, leaving the system vulnerable to exploitation. Secondly, the lack of error handling for database operations can potentially leak sensitive data or disrupt services in case of database errors. Moreover, the insecure authentication mechanism, relying on plaintext storage and direct comparison of passwords, exposes user credentials to theft and timing-based attacks. 
 
   
