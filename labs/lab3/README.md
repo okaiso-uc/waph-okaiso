@@ -79,4 +79,9 @@ $sql = "SELECT * FROM users WHERE username='$username' AND password= md5('$passw
 -  I then Deployed form.php and the modified index.php and tested the login functionality.
   ![ss3](Images/ss3.png)
 
+## Performing XSS and SQL Injection Attacks
+
+- Because the form lacks proper input validation, I was able to carry out a successful SQL injection attack using the username 'OR 1=1;#. This exploit worked because the SQL query string concatenation, along with the injected conditional statement 1=1, resulted in a true evaluation, enabling access to all records in the targeted table.
+  
+
   
