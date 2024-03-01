@@ -41,4 +41,7 @@ INSERT INTO users(username,password) VALUES ('admin, md5('MyPa$$w0rd));
 
 ![ss2](Images/ss2.png)
 
-## 
+## A Simple (Insecure)Login System with PHP/MySQL
+- I installed PHP PHP MySQLi extension with sudo apt-get install php-mysqli, and restarted Apache using sudo service apache2 restart.
+-  I modified index.php by adding a checklogin_mysql function in index.php for database programming authentication
+-  I then Deployed  form.php and the modified index.php and tested the login functionality.
