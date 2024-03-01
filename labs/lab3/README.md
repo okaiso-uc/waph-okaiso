@@ -42,7 +42,9 @@ INSERT INTO users(username,password) VALUES ('admin, md5('MyPa$$w0rd));
 ![ss2](Images/ss2.png)
 
 ## A Simple (Insecure)Login System with PHP/MySQL
+
 - I installed PHP PHP MySQLi extension with sudo apt-get install php-mysqli, and restarted Apache using sudo service apache2 restart.
+  
 -  I modified index.php by adding a checklogin_mysql function in index.php for database programming authentication
 - 
  ```
@@ -81,7 +83,16 @@ $sql = "SELECT * FROM users WHERE username='$username' AND password= md5('$passw
 
 ## Performing XSS and SQL Injection Attacks
 
+### SQL INJECTION
+
 - Because the form lacks proper input validation, I was able to carry out a successful SQL injection attack using the username 'OR 1=1;#. This exploit worked because the SQL query string concatenation, along with the injected conditional statement 1=1, resulted in a true evaluation, enabling access to all records in the targeted table.
+ ![ss4](Images/ss4.png)
+
+### XSS ATTACK
+- The site is vulnerable to XSS due to the lack of Input Validation and Output Encoding
+I was able to attack this site with the code : admin '#<script>alert(document.cookie)</script>
+![ss5](Images/ss5.png)
+
   
 
   
