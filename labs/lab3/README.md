@@ -25,7 +25,7 @@ In Lab 3, I Installed Mysql, created a new database with tables and permissions,
    GRANT ALL ON waph.* TO 'Admin'@localhost';
 ```
 
-[ss1](Images/ss1.png)
+![ss1](Images/ss1.png)
 
 - Following that I created a new table and inserted data into it
 ```
@@ -37,4 +37,4 @@ INSERT INTO users(username,password) VALUES ('admin, md5('MyPa$$w0rd));
 
 ```
 
-[ss2](Images/ss2.png)
+![ss2](Images/ss2.png)
