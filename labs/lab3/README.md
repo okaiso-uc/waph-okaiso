@@ -19,7 +19,7 @@ In Lab 3, I Installed Mysql, created a new database with tables and permissions,
 
 ## Database Creation, Database User and Permission 
 
- - I created a new database Waph and granted my user Okaiso all permissions using a database-account.sql file
+ - I created a new database Waph and granted my user Seth all permissions using a database-account.sql file
    
  ```
    create database waph;
