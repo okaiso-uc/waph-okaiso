@@ -115,7 +115,8 @@ $prepared_sql = "SELECT * FROM users where username=? AND password=md5(?);";
 
 - To mitigate XSS risks, I enhanced the code to sanitize outputs by using the htmlspecialchars function. Here's the revised code snippet:
   ```
-
+  echo "<script>alert('" . htmlspecialchars('Invalid username/password', ENT_QUOTES, 'UTF-8') . "');window.location='form.php';</script>";
+		 die();
   ```
   
 
