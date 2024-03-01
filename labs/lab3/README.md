@@ -77,6 +77,6 @@ $sql = "SELECT * FROM users WHERE username='$username' AND password= md5('$passw
 
 
 -  I then Deployed form.php and the modified index.php and tested the login functionality.
-  [ss3](Images/ss3.png)
+  ![ss3](Images/ss3.png)
 
   
