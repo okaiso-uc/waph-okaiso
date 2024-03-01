@@ -5,8 +5,8 @@
 	<h2> Welcome <?php echo $_POST['username']; ?> !</h2>
 <?php		
 	} else {
-		echo "<script>alert('Invalid username/password');window.location='form.php';</script>";
-		die();
+		 echo "<script>alert('" . htmlspecialchars('Invalid username/password', ENT_QUOTES, 'UTF-8') . "');window.location='form.php';</script>";
+		 die();
 	}
 
 	function checklogin($username, $password) {
