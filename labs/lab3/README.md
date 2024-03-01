@@ -14,14 +14,16 @@ In Lab 3, I Installed Mysql, created a new database with tables and permissions,
 
 ## Database Setup and Management
  - I used sudo "apt-get install mysql-server -y" to install MySQL server
+   
  - I then used "sudo mysql -u root -p to connect to the MySQL server, pressing enter when prompted for a password
 
 ## Database Creation, Database User and Permission 
 
  - I created a new database Waph and granted my user Okaiso all permissions using a database-account.sql file
+   
  ```
    create database waph;
-  " Create User 'okaiso'@localhost' IDENTIFIED BY 'ubuntu';
+  " Create User 'setg'@localhost' IDENTIFIED BY 'ubuntu';
    GRANT ALL ON waph.* TO 'Admin'@localhost';
 ```
 
@@ -38,3 +40,5 @@ INSERT INTO users(username,password) VALUES ('admin, md5('MyPa$$w0rd));
 ```
 
 ![ss2](Images/ss2.png)
+
+## 
