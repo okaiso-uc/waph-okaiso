@@ -10,7 +10,7 @@
 	}
 
 	function checklogin($username, $password) {
-		$account = array("admin", "12345");
+		$account = array("admin", "1234");
 		if ($username == $account[0] && $password == $account[1]) {
 		  return true;
 		} else {
