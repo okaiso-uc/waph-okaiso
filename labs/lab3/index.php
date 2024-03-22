@@ -19,7 +19,7 @@
 	}
 
 	function checklogin_mysql($username, $password) {
-		$mysqli = new mysqli('localhost', 'okaiso', 'Pa$$w0rd', 'waph');
+		$mysqli = new mysqli('localhost', 'okaiso', '12345', 'waph');
 		if ($mysqli->connect_errno) {
 			printf("Database connection failed: %s\n", $mysqli->connect_error);
 			exit(); 

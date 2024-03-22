@@ -1,9 +1,9 @@
 <?php
-session_set_cookie_params(15 * 60,"/","okaiso.waph.io",TRUE,TRUE);
-session_start();    
-
-if (isset($_POST["username"]) && isset($_POST["password"])) {
-    if (checklogin($_POST["username"], $_POST["password"])) {
+$username = $_POST["username"];
+$password = $_POST["password"];
+if (isset($username) && isset($password)) {
+    echo "Debug> got username=$username;password=$password";
+    /*if (checklogin($_POST["username"], $_POST["password"])) {
         $_SESSION['authenticated'] = TRUE;
         $_SESSION['username'] = $_POST["username"];
         $_SESSION['browser'] = $_SERVER["HTTP_USER_AGENT"];
@@ -11,22 +11,11 @@ if (isset($_POST["username"]) && isset($_POST["password"])) {
         session_destroy();
         echo "<script>alert('" . htmlspecialchars('Invalid username/password', ENT_QUOTES, 'UTF-8') . "');window.location='form.php';</script>";
         die();
-    }
+    }*/
+}else{
+    echo "No username/password provided!";
 }
 
-if (!isset($_SESSION['authenticated']) || $_SESSION['authenticated'] != TRUE) {
-    session_destroy();
-    echo "<script>alert('You have not logged in. Please login first!')</script>";
-    header("Refresh: 0; url=form.php");
-    die();
-}
-
-if ($_SESSION['browser'] == $_SERVER["HTTP_USER_AGENT"]){
-    session_destroy();
-    echo "<script>alert('Session hijacking attack is detected!')</script>";
-    header("Refresh: 0; url=form.php");
-    die();
-}
 
 function checklogin($username, $password) {
     $account = array("admin", "12345");
@@ -55,5 +44,3 @@ function checklogin_mysql($username, $password) {
     return false;
 }
 ?>
-<h2> Welcome <?php echo htmlentities($_SESSION['username']) ?> !</h2>
-<a href="logout.php">Logout</a>
