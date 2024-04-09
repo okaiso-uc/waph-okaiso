@@ -1,22 +1,25 @@
 <?php
 error_reporting(E_ALL);
+//ini_set('display_errors', 1);
 
-$username = $_POST["username"];
-$email = $_POST["email"];
-$password = $_POST["password"];
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $username = isset($_POST["username"]) ? $_POST["username"] : null;
+    $email = isset($_POST["email"]) ? $_POST["email"] : null;
+    $password = isset($_POST["password"]) ? $_POST["password"] : null;
 
-if (isset($username) && isset($email) && isset($password)) {
-    if (validateInput($username, $email, $password)) {
-        if (addNewUser($username, $email, $password)) {
-            echo "Registration succeed!";
+    if ($username !== null && $email !== null && $password !== null) {
+        if (validateInput($username, $email, $password)) {
+            if (addNewUser($username, $email, $password)) {
+                echo "Registration succeed!";
+            } else {
+                echo "Registration FAILED!";
+            }
         } else {
-            echo "Registration FAILED!";
+            echo "Invalid username, email, or password format!";
         }
     } else {
-        echo "Invalid username, email, or password format!";
+        echo "No username/email/password provided!";
     }
-} else {
-    echo "No username/email/password provided!";
 }
 
 function validateInput($username, $email, $password) {
