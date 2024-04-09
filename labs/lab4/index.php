@@ -3,7 +3,7 @@ session_set_cookie_params(15 * 60,"/","okaiso.waph.io",TRUE,TRUE);
 session_start();    
 
 if (isset($_POST["username"]) && isset($_POST["password"])) {
-    if (checklogin($_POST["username"], $_POST["password"])) {
+    if (checklogin_mysql($_POST["username"], $_POST["password"])) {
         $_SESSION['authenticated'] = TRUE;
         $_SESSION['username'] = $_POST["username"];
         $_SESSION['browser'] = $_SERVER["HTTP_USER_AGENT"];
@@ -21,24 +21,16 @@ if (!isset($_SESSION['authenticated']) || $_SESSION['authenticated'] != TRUE) {
     die();
 }
 
-if ($_SESSION['browser'] == $_SERVER["HTTP_USER_AGENT"]){
+if ($_SESSION['browser'] != $_SERVER["HTTP_USER_AGENT"]){
     session_destroy();
     echo "<script>alert('Session hijacking attack is detected!')</script>";
     header("Refresh: 0; url=form.php");
     die();
 }
 
-function checklogin($username, $password) {
-    $account = array("admin", "12345");
-    if ($username == $account[0] && $password == $account[1]) {
-        return true;
-    } else {
-        return false;
-    }
-}
 
 function checklogin_mysql($username, $password) {
-    $mysqli = new mysqli('localhost', 'okaiso', '12345', 'waph');
+    $mysqli = new mysqli('localhost', 'okaiso', 'Pa$$w0rd', 'waph');
     if ($mysqli->connect_errno) {
         printf("Database connection failed: %s\n", $mysqli->connect_error);
         exit(); 

