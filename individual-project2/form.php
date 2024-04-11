@@ -1,3 +1,8 @@
+<?php
+session_start();
+$rand = bin2hex(openssl_random_pseudo_bytes(16));
+$_SESSION["nocsrftoken"] = $rand;
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -46,13 +51,13 @@
 <body>
   <div class="container">
     <h1 class="text-center mb-4">A Simple login form, WAPH</h1>
-    <div class="text-center mb-3">Student Name</div>
+    <div class="text-center mb-3">Seth Okai</div>
     <div id="digit-clock" class="text-center mb-3"></div>
     <?php
-      //some code here
       echo "Visited time: " . date("Y-m-d h:i:sa");
     ?>
     <form action="index.php" method="POST" class="login">
+      <input type="hidden" name="nocsrftoken" value="<?php echo $rand; ?>"/>
       <div class="mb-3">
         <input type="text" class="form-control" id="username_or_email" name="username_or_email" placeholder="Username or Email">
       </div>
@@ -63,3 +68,4 @@
     </form>
   </div>
 </body>
+</html>

@@ -1,4 +1,17 @@
 <?php
+// Start session
+session_start();
+
+// Check CSRF token
+$csrf_token = isset($_POST["csrf_token"]) ? $_POST["csrf_token"] : null;
+if (!isset($csrf_token) || $csrf_token !== $_SESSION["csrf_token"]) {
+    echo "CSRF Attack detected!";
+    die();
+}
+
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
 // Database connection
 $mysqli = new mysqli('localhost', 'okaiso', 'Pa$$w0rd', 'waph');
 
@@ -10,58 +23,48 @@ if ($mysqli->connect_errno) {
 
 // Check if the form is submitted
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    // Check if profile information is provided via POST
+    // Check if new username and email are provided via POST
     if (isset($_POST["new_username"]) && isset($_POST["new_email"])) {
-        // Update profile information
         $new_username = $_POST["new_username"];
         $new_email = $_POST["new_email"];
 
-        // Add code to update profile information in the database
-        $query = "UPDATE users SET username=?, email=? WHERE username=?";
-
-        // Prepare the statement
-        $stmt = $mysqli->prepare($query);
-
-        // Bind parameters
-        $stmt->bind_param("sss", $new_username, $new_email, $_SESSION['username_or_email']);
-
-        // Execute the statement
-        if ($stmt->execute()) {
+        // Update profile information in the database
+        $result = updateProfile($_SESSION['username_or_email'], $new_username, $new_email);
+        if ($result === true) {
             echo "Profile information updated successfully!";
+        } elseif ($result === false) {
+            echo "Failed to update profile information! Please check your inputs.";
         } else {
-            echo "Error updating profile information: " . $stmt->error;
+            echo "Error: " . $result;
         }
-
-        // Close statement
-        $stmt->close();
+    } else {
+        echo "Both username and email must be provided!";
     }
 }
 
-// Retrieve user's current name and email from the database
-$query = "SELECT username, email FROM users WHERE username=?";
-$stmt = $mysqli->prepare($query);
-$stmt->bind_param("s", $_SESSION['username_or_email']);
-$stmt->execute();
-$stmt->bind_result($current_username, $current_email);
-$stmt->fetch();
-$stmt->close();
-?>
+function updateProfile($current_username_or_email, $new_username, $new_email) {
+    global $mysqli;
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Change Profile</title>
-</head>
-<body>
-    <h1>Change Profile Information</h1>
-    <form action="change_profile.php" method="POST">
-        <label for="new_username">New Username:</label><br>
-        <input type="text" id="new_username" name="new_username" value="<?php echo htmlspecialchars($current_username); ?>" required><br>
-        <label for="new_email">New Email:</label><br>
-        <input type="email" id="new_email" name="new_email" value="<?php echo htmlspecialchars($current_email); ?>" required><br><br>
-        <button type="submit">Change Profile</button>
-    </form>
-</body>
-</html>
+    // Prepare the SQL statement to update the profile information
+    $query = "UPDATE users SET username = ?, email = ? WHERE username = ? OR email = ?";
+
+    // Prepare the statement
+    $stmt = $mysqli->prepare($query);
+
+    if (!$stmt) {
+        return "Prepare failed: (" . $mysqli->errno . ") " . $mysqli->error;
+    }
+
+    // Bind parameters
+    $stmt->bind_param("ssss", $new_username, $new_email, $current_username_or_email, $current_username_or_email);
+
+    // Execute the statement
+    if ($stmt->execute()) {
+        // Update the session with the new username
+        $_SESSION['username_or_email'] = $new_username;
+        return true;
+    } else {
+        return "Execute failed: (" . $stmt->errno . ") " . $stmt->error;
+    }
+}
+?>

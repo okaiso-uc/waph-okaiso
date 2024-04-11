@@ -1,4 +1,8 @@
-
+<?php
+session_start();
+$csrf_token = bin2hex(openssl_random_pseudo_bytes(16));
+$_SESSION["csrf_token"] = $csrf_token;
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

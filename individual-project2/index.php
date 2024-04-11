@@ -7,6 +7,13 @@ ini_set('display_errors', 1);
 session_set_cookie_params(15 * 60, "/", "okaiso.waph.io", TRUE, TRUE);
 session_start();
 
+// Check CSRF token
+$token = isset($_POST["nocsrftoken"]) ? $_POST["nocsrftoken"] : null;
+if (!isset($token) || $token !== $_SESSION["nocsrftoken"]) {
+    echo "CSRF Attack detected!";
+    die();
+}
+
 // Check if the form is submitted
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     // Check if username/email and password are provided via POST
@@ -130,14 +137,14 @@ function checklogin_mysql($username_or_email, $password) {
 <body>
   <div class="container">
     <h1 class="text-center mb-4">A Simple login form, WAPH</h1>
-    <div class="text-center mb-3">Student Name</div>
+    <div class="text-center mb-3">Seth Okai</div>
     <div id="digit-clock" class="text-center mb-3"></div>
     <?php
       // Display visited time
       echo "Visited time: " . date("Y-m-d h:i:sa");
     ?>
     <h2>Welcome <?php echo isset($_SESSION['username_or_email']) ? htmlentities($_SESSION['username_or_email']) : ''; ?>!</h2>
-    <a href="changepasswordform.php">Change password</a> | <a href="logout.php">Logout</a>
+    <a href="changepasswordform.php">Change password</a> | <a href="logout.php">Logout |  <a href="profile_form.php">Change Profile </a>
   </div>
 </body>
 </html>

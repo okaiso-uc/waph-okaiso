@@ -5,20 +5,25 @@ ini_set('display_errors', 1);
 // Start session
 session_start();
 
+// Check CSRF token
+$csrf_token = isset($_POST["csrf_token"]) ? $_POST["csrf_token"] : null;
+if (!isset($csrf_token) || $csrf_token !== $_SESSION["csrf_token"]) {
+    echo "CSRF Attack detected!";
+    die();
+}
 
-    $username_or_email = $_POST["username_or_email"];
-    $password = $_POST["newpassword"];
+$username_or_email = $_POST["username_or_email"];
+$password = $_POST["newpassword"];
 
-    if (isset($username_or_email) && isset($password)) {
-        if (changepassword($username_or_email, $password)) {
-            echo "Password has been changed!";
-        } else {
-            echo "Change password failed!";
-        }
+if (isset($username_or_email) && isset($password)) {
+    if (changepassword($username_or_email, $password)) {
+        echo "Password has been changed!";
     } else {
-        echo "No username/password provided!";
+        echo "Change password failed!";
     }
-
+} else {
+    echo "No username/password provided!";
+}
 
 function changepassword($username_or_email, $password) {
     $mysqli = new mysqli('localhost', 'okaiso', 'Pa$$w0rd', 'waph');
