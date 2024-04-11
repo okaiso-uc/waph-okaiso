@@ -1,9 +1,8 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>WAPH-Change password</title>
+  <title>WAPH-Login page</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
   <script type="text/javascript">
       function displayTime() {
@@ -46,23 +45,21 @@
 </head>
 <body>
   <div class="container">
-    <h1 class="text-center mb-4">Change password, WAPH</h1>
-    <div class="text-center mb-3">Seth Okai</div>
+    <h1 class="text-center mb-4">A Simple login form, WAPH</h1>
+    <div class="text-center mb-3">Student Name</div>
     <div id="digit-clock" class="text-center mb-3"></div>
     <?php
+      //some code here
       echo "Visited time: " . date("Y-m-d h:i:sa");
     ?>
-    <form action="changepassword.php" method="POST" class="login">
+    <form action="index.php" method="POST" class="login">
       <div class="mb-3">
-        <input type="text" class="form-control" id="username" name="username_or_email" placeholder="Username or Email">
+        <input type="text" class="form-control" id="username_or_email" name="username_or_email" placeholder="Username or Email">
       </div>
       <div class="mb-3">
-        <input type="password" class="form-control" id="newpassword" name="newpassword" placeholder="New Password" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&])[A-Za-z\d!@#$%^&]{8,}$" title="Password must have at least 8 characters with 1 special symbol, 1 number, 1 lowercase, and 1 uppercase letter">
+        <input type="password" class="form-control" id="password" name="password" placeholder="Password">
       </div>
-      <!-- Include CSRF token in the form -->
-      <input type="hidden" name="csrf_token" value="<?php echo $csrf_token; ?>">
-      <button type="submit" class="btn btn-primary">Change Password</button>
+      <button type="submit" class="btn btn-primary">Login</button>
     </form>
   </div>
 </body>
-</html>
