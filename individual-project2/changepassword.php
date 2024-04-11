@@ -33,8 +33,8 @@ function changepassword($username_or_email, $password) {
         return FALSE;
     }
 
-    // Hash the password securely
-    $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+    // Hash the password using MD5
+    $hashed_password = md5($password);
 
     // Determine if the username_or_email is an email or username
     if (filter_var($username_or_email, FILTER_VALIDATE_EMAIL)) {

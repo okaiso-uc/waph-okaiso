@@ -13,65 +13,66 @@ $_SESSION["csrf_token"] = $csrf_token;
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Profile</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script type="text/javascript">
-        function displayTime() {
-            document.getElementById('digit-clock').innerHTML = "Current time:" + new Date();
-        }
-        setInterval(displayTime,500);
-    </script>
     <style>
         body {
-            background-color: #f8f9fa;
             font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
         .container {
             max-width: 400px;
-            margin: 100px auto;
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             background-color: #fff;
         }
         .form-control {
-            border-radius: 20px;
+            margin-bottom: 15px;
+            width: calc(100% - 22px); /* Adjust width to fit the button's padding */
+            box-sizing: border-box;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
         }
-        .btn-primary {
-            border-radius: 20px;
-            padding: 10px 20px;
-            width: 100%;
-            margin-top: 20px;
+        .btn-container {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px; /* Increase space between buttons */
+        }
+        .btn {
+            flex: 1;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
             background-color: #007bff;
-            border-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            transition: background-color 0.3s;
         }
-        .btn-primary:hover {
+        .btn:hover {
             background-color: #0056b3;
-            border-color: #0056b3;
-        }
-        .btn-primary:focus {
-            box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
         }
     </style>
 </head>
 <body>
-<div class="container">
-    <h1 class="text-center mb-4">Change password, WAPH</h1>
-    <div class="text-center mb-3">Seth Okai</div>
-    <div id="digit-clock" class="text-center mb-3"></div>
-    <?php
-    echo "Visited time: " . date("Y-m-d h:i:sa");
-    ?>
-    <form action="changepassword.php" method="POST" class="login">
-        <div class="mb-3">
-            <input type="text" class="form-control" id="username" name="username_or_email" placeholder="Username or Email">
-        </div>
-        <div class="mb-3">
-            <input type="password" class="form-control" id="newpassword" name="newpassword" placeholder="New Password" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&])[A-Za-z\d!@#$%^&]{8,}$" title="Password must have at least 8 characters with 1 special symbol, 1 number, 1 lowercase, and 1 uppercase letter">
-        </div>
-        <!-- Include CSRF token in the form -->
-        <input type="hidden" name="csrf_token" value="<?php echo $csrf_token; ?>">
-        <button type="submit" class="btn btn-primary">Change Password</button>
-    </form>
-</div>
+    <div class="container">
+        <h1>User Profile</h1>
+        <form action="change_profile.php" method="post">
+            <input type="hidden" name="csrf_token" value="<?php echo $csrf_token; ?>">
+            <input type="text" class="form-control" name="new_username" placeholder="New Username" required>
+            <input type="email" class="form-control" name="new_email" placeholder="New Email" required>
+            <div class="btn-container">
+                <button type="submit" class="btn">Save Changes</button>
+                <a href="logout.php" class="btn">Logout</a>
+            </div>
+        </form>
+    </div>
 </body>
 </html>

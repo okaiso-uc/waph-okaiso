@@ -68,3 +68,8 @@ function updateProfile($current_username_or_email, $new_username, $new_email) {
     }
 }
 ?>
+
+<!-- Display the logout button -->
+<form action="logout.php" method="post">
+    <button type="submit">Logout</button>
+</form>
